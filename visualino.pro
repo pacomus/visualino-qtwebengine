@@ -11,6 +11,8 @@ TRANSLATIONS = \
     ts/visualino_pt-pt.ts \
     ts/visualino_ru.ts
 
+QT += webenginewidgets
+
 macx {
     deploy.commands = macdeployqt $${OUT_PWD}/visualino.app
     QMAKE_EXTRA_TARGETS += deploy
