@@ -9,7 +9,7 @@
 </head>
 <body>
     <xml id="startBlocks" style="display: none">
-        <block type="controls_setupLoop" deletable="true"></block>
+        <block type="controls_setupLoop" deletable="false"></block>
     </xml>
     <div id="wrap">
         <div id="blockly" style="float: left; width: 66%;"></div>
@@ -21,8 +21,17 @@
     <script src="javascript/blockly-bq/blockly_compressed.js"></script>
     <script src="javascript/blockly-bq/blocks_compressed.js"></script>
     <script src="javascript/blockly-bq/arduino_compressed.js"></script>
+    <script src="qrc:///qtwebchannel/qwebchannel.js">
+</script>
     <script src="roboblocks.js"></script>
     <script>
+        var counter=0;
+        var el;
+        var colors=[];
+
+        function mainFunction(lang) {
+          if(counter==0) {  
+            window.roboblocksLanguage=lang;
             if (window.roboblocksLanguage === undefined
                 || window.roboblocksLanguage == null) {
                 var roboblocksLanguage = 'en-GB';
@@ -33,7 +42,7 @@
             });
 
             // New workspace for each test case
-            var el = document.getElementById('blockly');
+            el = document.getElementById('blockly');
             Blockly.inject(el, {
                 toolbox: Blockly.createToolbox()
             });
@@ -44,7 +53,7 @@
             $('.blocklySvg, #blockly').height('100%');
             $('.blocklySvg').width('100%');
 
-            var colors = [
+            colors = [
                 "",
                 RoboBlocks.LANG_COLOUR_PROCEDURES,
                 RoboBlocks.LANG_COLOUR_CONTROL,
@@ -60,50 +69,55 @@
                 RoboBlocks.LANG_COLOUR_MOTOR,
                 RoboBlocks.LANG_COLOUR_ZUM,
             ];
+
             $('.blocklyTreeRow').each( function (i,e) {
-                $(e).prepend('<span class="treeLabelBlock" style="background-color:' + colors[i] + '"></span>');
+                $(e).prepend('<span class="treeLabelBlock" style="background-color:'
+                    + colors[i] + '"></span>');
             });
+          }
+          counter++;
 
-            // Update code
-            Blockly.addChangeListener(function () {
-                $('#code').html('<code class="c++"><pre>'
-                    + escapeCode(Blockly.Arduino.workspaceToCode())
-                    + '</pre></code>');
-                // Highlight
-                $("pre").each(function (i, e) {
+          // Update code
+          Blockly.addChangeListener(function () {
+              $('#code').html('<code class="c++"><pre>' +
+                 escapeCode(Blockly.Arduino.workspaceToCode()) 
+                 + '</pre></code>');
+              // Highlight
+              $("pre").each(function (i, e) {
                   hljs.highlightBlock(e);
-                });
-                // webHelper is injected in Visualino
-                webHelper.sourceChanged();
-            });
+              });
+              // webHelper is injected in Visualino
+              webHelper.sourceChanged();
+          });
+        }
 
-            // Show/hide code
-            function toogleCode() {
-                if ($('#code').css('display') == 'none') {
-                    // Show
-                    $('#code').show();
-                    $('#blockly').width('66%');
-                } else {
-                    // Hide
-                    $('#code').hide();
-                    $('#blockly').width('100%');
-                }
-                // Resize workspace
-                Blockly.fireUiEvent(window, "resize");
+        // Show/hide code
+        function toogleCode() {
+            if ($('#code').css('display') == 'none') {
+                // Show
+                $('#code').show();
+                $('#blockly').width('66%');
+            } else {
+                // Hide
+                $('#code').hide();
+                $('#blockly').width('100%');
             }
+            // Resize workspace
+            Blockly.fireUiEvent(window, "resize");
+        }
 
-            function escapeCode(code) {
-                var str = code;
-                str = str.replace(/</g, "&lt;");
-                str = str.replace(/>/g, "&gt;");
-                return str;
-            }
+        function escapeCode(code) {
+            var str = code;
+            str = str.replace(/</g, "&lt;");
+            str = str.replace(/>/g, "&gt;");
+            return str;
+        }
 
-            function resetWorkspace() {
-                Blockly.mainWorkspace.clear();
-                Blockly.Xml.domToWorkspace(Blockly.getMainWorkspace(),
-                    document.getElementById('startBlocks'));
-            }
+        function resetWorkspace() {
+            Blockly.mainWorkspace.clear();
+            Blockly.Xml.domToWorkspace(Blockly.getMainWorkspace(),
+                document.getElementById('startBlocks'));
+        }
     </script>
 </body>
 </html>

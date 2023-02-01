@@ -1,6 +1,6 @@
-/*! roboblocks - v0.2.3 - 2020-02-23
+/*! roboblocks - v0.2.3 - 2022-12-12
  * https://github.com/bq/roboblocks
- * Copyright (c) 2020 bq; Licensed  */
+ * Copyright (c) 2022 bq; Licensed  */
 
 (function(factory) {
     if (typeof define === 'function' && define.amd) {
@@ -240,10 +240,10 @@
                 LANG_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL: 'fins',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_WHILE: 'Mentre la condició es compleixi, fa les instruccions.',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL: 'Mentre la condició no es compleixi, fa les instruccions.',
-                LANG_CONTROLS_REPEAT_TITLE_REPEAT: 'Repeteix',
-                LANG_CONTROLS_REPEAT_TITLE_TIMES: 'vegades',
-                LANG_CONTROLS_REPEAT_INPUT_DO: 'fes',
-                LANG_CONTROLS_REPEAT_TOOLTIP: 'Executa les instruccions un nombre concret de vegades.',
+                LANG_CONTROLS_REPEAT: 'Repeat', //to translate
+                LANG_CONTROLS_REPEAT_TIMES: 'times', //to translate
+                LANG_CONTROLS_REPEAT_DO: 'do', //to translate
+                LANG_CONTROLS_REPEAT_TOOLTIP: 'Execute blocks a number of times.', //to translate
                 LANG_CONTROLS_FLOW_STATEMENTS_HELPURL: '',
                 LANG_CONTROLS_FLOW_STATEMENTS_INPUT_OFLOOP: 'el bucle',
                 LANG_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK: 'interromp',
@@ -347,6 +347,11 @@
                 LANG_TEXT_SPECIAL_TOOLTIP: 'Escriu caràcters especials.',
                 LANG_TEXT_COMMENT: 'Comment', //to translate
                 LANG_TEXT_COMMENT_TOOLTIP: 'Inserts a comment of one line in the program.', //to translate
+                LANG_TEXT_TO_INT: 'Converts to', //to translate
+                LANG_TEXT_TO_INT_INT: 'Integer', //to translate
+                LANG_TEXT_TO_INT_FLOAT: 'Float', //to translate
+                LANG_TEXT_TO_INT_TEXT: 'text', //to translate
+                LANG_TEXT_TO_INT_TOOLTIP: 'Convierts a text into an integer or a float.', //to translate
                 //advanced blocks :
                 LANG_CATEGORY_ADVANCED: 'Funcions PIN',
                 LANG_ADVANCED_CONVERSION_CONVERT: 'Converteix',
@@ -561,7 +566,32 @@
                 LANG_WIFI_CLOSE_SERVER: 'Wifi:stop server', //To translate
                 LANG_WIFI_CLOSE_SERVER_TOOLTIP: 'Shutdown TCP server.', //To translate
                 LANG_WIFI_CLOSE_CLIENT: 'Wifi:stop connection', //To translate
-                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.' //To translate
+                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.', //To translate
+                LANG_RF24_CONNECT: 'NRF24L01', //To translate
+                LANG_RF24_CONNECT_SEND: 'Send', //To translate
+                LANG_RF24_CONNECT_RECEIVE: 'Receive', //To translate
+                LANG_RF24_CONNECT_CE_PIN: 'CE Pin', //To translate
+                LANG_RF24_CONNECT_CSN_PIN: 'CSN Pin', //To translate
+                LANG_RF24_CONNECT_ADDRESS: 'Address pipe', //To translate
+                LANG_RF24_CONNECT_PIPE: 'Communication number (0-5)', //To translate
+                LANG_RF24_CONNECT_TOOLTIP: 'Connects using a wireless NRF24L01 device.', //To translate
+                LANG_RF24_SEND: 'NRF24L01 Send character', //To translate
+                LANG_RF24_SEND_TOOLTIP: 'Send a character stored in variable using a NRF24L01 connection.', //To translate
+                LANG_RF24_RECEIVE: 'NRF24L01 Receive character', //To translate
+                LANG_RF24_RECEIVE_TOOLTIP: 'Get a character received from a NRF24L01 and stores in a variable.', //To translate
+                //array blocks:
+                LANG_ARRAYS_GLOBAL: 'Declare GLOBAL array', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE: 'of type', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION: 'with', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION2: 'elements', //To translate
+                LANG_ARRAYS_GLOBAL_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements.', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT: 'and initial values', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements, with initial values.', //To translate
+                LANG_ARRAYS_LOCAL: 'Declare LOCAL array', //To translate
+                LANG_ARRAYS_GET: 'Element', //To translate
+                LANG_ARRAYS_GET_NAME: 'of array', //To translate
+                LANG_ARRAYS_GET_TOOLTIP: 'Get value of the element array.', //To translate
+                LANG_ARRAYS_SET_TOOLTIP: 'Set value for element array.' //To translate
             };
             // Node
             if (typeof module !== 'undefined' && module.exports) {
@@ -761,10 +791,10 @@
                 LANG_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL: 'until',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_WHILE: 'While the condition is true, then do the statements.',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL: 'While the condition is false, then do the statements.',
-                LANG_CONTROLS_REPEAT_TITLE_REPEAT: 'Repeat',
-                LANG_CONTROLS_REPEAT_TITLE_TIMES: 'times',
-                LANG_CONTROLS_REPEAT_INPUT_DO: 'do',
-                LANG_CONTROLS_REPEAT_TOOLTIP: 'Repeat the statements a certain number of times',
+                LANG_CONTROLS_REPEAT: 'Repeat',
+                LANG_CONTROLS_REPEAT_TIMES: 'times',
+                LANG_CONTROLS_REPEAT_DO: 'do',
+                LANG_CONTROLS_REPEAT_TOOLTIP: 'Execute blocks a number of times.',
                 LANG_CONTROLS_FLOW_STATEMENTS_HELPURL: '',
                 LANG_CONTROLS_FLOW_STATEMENTS_INPUT_OFLOOP: 'of loop',
                 LANG_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK: 'break out',
@@ -868,6 +898,11 @@
                 LANG_TEXT_SPECIAL_TOOLTIP: 'Writes special Chars.',
                 LANG_TEXT_COMMENT: 'Comment',
                 LANG_TEXT_COMMENT_TOOLTIP: 'Inserts a comment of one line in the program.',
+                LANG_TEXT_TO_INT: 'Converts to',
+                LANG_TEXT_TO_INT_INT: 'Integer',
+                LANG_TEXT_TO_INT_FLOAT: 'Float',
+                LANG_TEXT_TO_INT_TEXT: 'text',
+                LANG_TEXT_TO_INT_TOOLTIP: 'Convierts a text into an integer or a float.',
                 //advanced blocks :
                 LANG_CATEGORY_ADVANCED: 'Pin functions',
                 LANG_ADVANCED_INOUT_ANALOG_READ: 'AnalogRead PIN#',
@@ -1075,7 +1110,32 @@
                 LANG_WIFI_CLOSE_SERVER: 'Wifi:stop server',
                 LANG_WIFI_CLOSE_SERVER_TOOLTIP: 'Shutdown TCP server.',
                 LANG_WIFI_CLOSE_CLIENT: 'Wifi:stop connection',
-                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.'
+                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.',
+                LANG_RF24_CONNECT: 'NRF24L01',
+                LANG_RF24_CONNECT_SEND: 'Send',
+                LANG_RF24_CONNECT_RECEIVE: 'Receive',
+                LANG_RF24_CONNECT_CE_PIN: 'CE Pin',
+                LANG_RF24_CONNECT_CSN_PIN: 'CSN Pin',
+                LANG_RF24_CONNECT_ADDRESS: 'Address pipe',
+                LANG_RF24_CONNECT_PIPE: 'Communication number (0-5)',
+                LANG_RF24_CONNECT_TOOLTIP: 'Connects using a wireless NRF24L01 device.',
+                LANG_RF24_SEND: 'NRF24L01 Send character',
+                LANG_RF24_SEND_TOOLTIP: 'Send a character stored in variable using a NRF24L01 connection.',
+                LANG_RF24_RECEIVE: 'NRF24L01 Receive character',
+                LANG_RF24_RECEIVE_TOOLTIP: 'Get a character received from a NRF24L01 and stores in a variable.',
+                //array blocks:
+                LANG_ARRAYS_GLOBAL: 'Declare GLOBAL array',
+                LANG_ARRAYS_GLOBAL_TYPE: 'of type',
+                LANG_ARRAYS_GLOBAL_DIMENSION: 'with',
+                LANG_ARRAYS_GLOBAL_DIMENSION2: 'elements',
+                LANG_ARRAYS_GLOBAL_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements.',
+                LANG_ARRAYS_GLOBAL_TYPE_INIT: 'and initial values',
+                LANG_ARRAYS_GLOBAL_TYPE_INIT_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements, with initial values.',
+                LANG_ARRAYS_LOCAL: 'Declare LOCAL array',
+                LANG_ARRAYS_GET: 'Element',
+                LANG_ARRAYS_GET_NAME: 'of array',
+                LANG_ARRAYS_GET_TOOLTIP: 'Get value of the element array.',
+                LANG_ARRAYS_SET_TOOLTIP: 'Set value for element array.'
             };
             // Node
             if (typeof module !== 'undefined' && module.exports) {
@@ -1147,15 +1207,15 @@
                 LANG_BQ_BLUETOOTH_DEF_TOOLTIP: 'Definición del módulo Bluetooth',
                 LANG_ADVANCED_BT_SERIAL_AVAILABLE: 'Bluetooth: Puerto Serie Disponible',
                 LANG_ADVANCED_BT_SERIAL_AVAILABLE_TOOLTIP: 'Comprueba si el módulo Bluetooth está disponible o no',
-                LANG_ADVANCED_SERIAL_AVAILABLE: 'Puerto Serie Disponible',
-                LANG_ADVANCED_SERIAL_AVAILABLE_TOOLTIP: 'Comprueba si el puerto serie está disponible o no',
-                LANG_ADVANCED_SERIAL_PARSEINT: 'Leer entero por el puerto serie', // To translate
-                LANG_ADVANCED_SERIAL_PARSEINT_TOOLTIP: 'Devuelve el primer número entero (largo) desde el puerto serie', // To translate
-                LANG_ADVANCED_SERIAL_PRINT: 'Enviar por serie',
-                LANG_ADVANCED_SERIAL_PRINT_TOOLTIP: 'Envía los datos por el puerto serie como texto ASCII.',
-                LANG_ADVANCED_SERIAL_PRINTLN: 'Enviar por serie con RCSL',
-                LANG_ADVANCED_SERIAL_PRINTLN_TOOLTIP: 'Envía los datos por el puerto serie como texto ASCII, seguid de un retorno de carro (RC) y salto de línea (SL).',
-                LANG_ADVANCED_SERIAL_PRINT_FORMAT: 'Enviar por serie con formato',
+                LANG_ADVANCED_SERIAL_AVAILABLE: 'Monitor serie disponible',
+                LANG_ADVANCED_SERIAL_AVAILABLE_TOOLTIP: 'Comprueba si hay datos para recibir del monitor serie',
+                LANG_ADVANCED_SERIAL_PARSEINT: 'Leer entero del monitor serie',
+                LANG_ADVANCED_SERIAL_PARSEINT_TOOLTIP: 'Devuelve el primer número entero (largo) desde el monitor serie',
+                LANG_ADVANCED_SERIAL_PRINT: 'Enviar al monitor',
+                LANG_ADVANCED_SERIAL_PRINT_TOOLTIP: 'Envía los datos al monitor serie como texto ASCII.',
+                LANG_ADVANCED_SERIAL_PRINTLN: 'Enviar al monitor con RCSL',
+                LANG_ADVANCED_SERIAL_PRINTLN_TOOLTIP: 'Envía los datos al monitor serie como texto ASCII, seguid de un retorno de carro (RC) y salto de línea (SL).',
+                LANG_ADVANCED_SERIAL_PRINT_FORMAT: 'Enviar al monitor con formato',
                 LANG_ADVANCED_SERIAL_PRINT_FORMAT_1: 'Binario',
                 LANG_ADVANCED_SERIAL_PRINT_FORMAT_2: 'Octal',
                 LANG_ADVANCED_SERIAL_PRINT_FORMAT_3: 'Decimal',
@@ -1165,13 +1225,13 @@
                 LANG_ADVANCED_SERIAL_PRINT_FORMAT_7: 'Dos decimales',
                 LANG_ADVANCED_SERIAL_PRINT_FORMAT_8: 'Tres decimales',
                 LANG_ADVANCED_SERIAL_PRINT_FORMAT_9: 'Cuatro decimales',
-                LANG_ADVANCED_SERIAL_PRINT_FORMAT_TOOLTIP: 'Envía un valor numérico por el puerto serie con el formato especificado',
-                LANG_ADVANCED_SERIAL_PRINTLN_FORMAT: 'Enviar por serie con RCSL y formato',
-                LANG_ADVANCED_SERIAL_PRINTLN_FORMAT_TOOLTIP: 'Envía un valor numérico por el puerto serie, seguido de un retorno de carro (RC) y salto de línea (SL), con el formato especificado',
-                LANG_ADVANCED_SERIAL_READ: 'Leer desde el puerto serie',
-                LANG_ADVANCED_SERIAL_READ_TOOLTIP: 'Lee los datos que se reciben por el puerto serie como texto bytes.',
-                LANG_ADVANCED_SERIAL_READSTRING: 'Leer cadena desde el puerto serie',
-                LANG_ADVANCED_SERIAL_READSTRING_TOOLTIP: 'Lee los datos que se reciben por el puerto serie como texto ASCII.',
+                LANG_ADVANCED_SERIAL_PRINT_FORMAT_TOOLTIP: 'Envía un valor numérico al monitor serie con el formato especificado',
+                LANG_ADVANCED_SERIAL_PRINTLN_FORMAT: 'Enviar al monitor con RCSL y formato',
+                LANG_ADVANCED_SERIAL_PRINTLN_FORMAT_TOOLTIP: 'Envía un valor numérico al monitor serie, seguido de un retorno de carro (RC) y salto de línea (SL), con el formato especificado',
+                LANG_ADVANCED_SERIAL_READ: 'Leer desde el monitor serie',
+                LANG_ADVANCED_SERIAL_READ_TOOLTIP: 'Lee los datos que se reciben desde el monitor serie como texto bytes.',
+                LANG_ADVANCED_SERIAL_READSTRING: 'Leer cadena desde el monitor serie',
+                LANG_ADVANCED_SERIAL_READSTRING_TOOLTIP: 'Lee los datos que se reciben del monitor serie como texto ASCII.',
                 //Sensor blocks:
                 LANG_CATEGORY_SENSOR: 'Sensores',
                 LANG_BQ_BAT: 'BAT - Sensor de Ultrasonidos',
@@ -1275,10 +1335,10 @@
                 LANG_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL: 'hasta',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_WHILE: 'Mientras la condición sea verdadera, ejecutar las instrucciones.',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL: 'Mientras la condición sea falsa, ejecutar las instrucciones.',
-                LANG_CONTROLS_REPEAT_TITLE_REPEAT: 'Repetir',
-                LANG_CONTROLS_REPEAT_TITLE_TIMES: 'veces',
-                LANG_CONTROLS_REPEAT_INPUT_DO: 'ejecutar',
-                LANG_CONTROLS_REPEAT_TOOLTIP: 'Ejecutar las instrucciones un número concreto de veces.',
+                LANG_CONTROLS_REPEAT: 'Repetir',
+                LANG_CONTROLS_REPEAT_TIMES: 'veces',
+                LANG_CONTROLS_REPEAT_DO: 'ejecutar',
+                LANG_CONTROLS_REPEAT_TOOLTIP: 'Ejecutar las instrucciones el número de veces indicado.',
                 LANG_CONTROLS_FLOW_STATEMENTS_HELPURL: '',
                 LANG_CONTROLS_FLOW_STATEMENTS_INPUT_OFLOOP: 'el bucle',
                 LANG_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK: 'interrumpir',
@@ -1382,6 +1442,11 @@
                 LANG_TEXT_SPECIAL_TOOLTIP: 'Escribe caracteres especiales.',
                 LANG_TEXT_COMMENT: 'Comentario',
                 LANG_TEXT_COMMENT_TOOLTIP: 'Inserta un bloque de comentario de una línea en el programa.',
+                LANG_TEXT_TO_INT: 'Convertir a',
+                LANG_TEXT_TO_INT_INT: 'Entero',
+                LANG_TEXT_TO_INT_FLOAT: 'Decimal',
+                LANG_TEXT_TO_INT_TEXT: 'el texto',
+                LANG_TEXT_TO_INT_TOOLTIP: 'Convierte el texto en un número entero o con decimales.',
                 //advanced blocks :
                 LANG_CATEGORY_ADVANCED: 'Funciones PIN',
                 LANG_ADVANCED_INOUT_ANALOG_READ: 'Leer el pin analógico PIN#',
@@ -1588,12 +1653,31 @@
                 LANG_WIFI_CLOSE_SERVER_TOOLTIP: 'Finaliza el servidor TCP.',
                 LANG_WIFI_CLOSE_CLIENT: 'Wifi:terminar la conexión',
                 LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Finaliza la conexión con el servidor TCP.',
-                //arrays blocks :
+                LANG_RF24_CONNECT: 'NRF24L01',
+                LANG_RF24_CONNECT_SEND: 'Enviar',
+                LANG_RF24_CONNECT_RECEIVE: 'Recibir',
+                LANG_RF24_CONNECT_CE_PIN: 'Pin CE',
+                LANG_RF24_CONNECT_CSN_PIN: 'Pin CSN',
+                LANG_RF24_CONNECT_ADDRESS: 'Dirección de la comunicación',
+                LANG_RF24_CONNECT_PIPE: 'Nº de comunicación (0-5)',
+                LANG_RF24_CONNECT_TOOLTIP: 'Realiza una conexión inalámbrica mediante un adaptador NRF24L01.',
+                LANG_RF24_SEND: 'NRF24L01 Enviar carácter',
+                LANG_RF24_SEND_TOOLTIP: 'Envía un carácter almacenado en la variable por la conexión con un adaptador NRF24L01.',
+                LANG_RF24_RECEIVE: 'NRF24L01 Leer carácter',
+                LANG_RF24_RECEIVE_TOOLTIP: 'Lee un carácter recibido por la conexión de un adaptador NRF24L01 y lo guarda en la variable.',
+                //array blocks:
                 LANG_ARRAYS_GLOBAL: 'Declarar vector GLOBAL',
-                LANG_ARRAYS_GLOBAL_TYPE: 'de tipo ',
+                LANG_ARRAYS_GLOBAL_TYPE: 'de tipo',
                 LANG_ARRAYS_GLOBAL_DIMENSION: 'con',
                 LANG_ARRAYS_GLOBAL_DIMENSION2: 'elementos',
-                LANG_ARRAYS_GLOBAL_TOOLTIP: 'Declara y define un vector GLOBAL del tipo y con los elementos especificados.'
+                LANG_ARRAYS_GLOBAL_TOOLTIP: 'Declara y define un vector GLOBAL del tipo y con el número de elementos especificados.',
+                LANG_ARRAYS_GLOBAL_TYPE_INIT: 'y los valores iniciales',
+                LANG_ARRAYS_GLOBAL_TYPE_INIT_TOOLTIP: 'Declara y define un vector GLOBAL del tipo y con el número de elementos especificados, indicando sus valores iniciales.',
+                LANG_ARRAYS_LOCAL: 'Declarar vector LOCAL',
+                LANG_ARRAYS_GET: 'Elemento',
+                LANG_ARRAYS_GET_NAME: 'del vector',
+                LANG_ARRAYS_GET_TOOLTIP: 'Devuelve el valor del elemento indicado en el vector.',
+                LANG_ARRAYS_SET_TOOLTIP: 'Establece el valor del elemento indicado en el vector.'
             };
             // Node
             if (typeof module !== 'undefined' && module.exports) {
@@ -1793,10 +1877,10 @@
                 LANG_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL: 'honaino',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_WHILE: 'Baldintza egiazkoa den bitartean, aginduak exekutatu.',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL: 'Baldintza faltsua den bitartean, aginduak exekutatu.',
-                LANG_CONTROLS_REPEAT_TITLE_REPEAT: 'Errepikatu',
-                LANG_CONTROLS_REPEAT_TITLE_TIMES: 'aldiz',
-                LANG_CONTROLS_REPEAT_INPUT_DO: 'exekutatu',
-                LANG_CONTROLS_REPEAT_TOOLTIP: 'Aginduak exekutatu aldi kopuru jakin bat.',
+                LANG_CONTROLS_REPEAT: 'Repeat', //to translate
+                LANG_CONTROLS_REPEAT_TIMES: 'times', //to translate
+                LANG_CONTROLS_REPEAT_DO: 'do', //to translate
+                LANG_CONTROLS_REPEAT_TOOLTIP: 'Execute blocks a number of times.', //to translate
                 LANG_CONTROLS_FLOW_STATEMENTS_HELPURL: '',
                 LANG_CONTROLS_FLOW_STATEMENTS_INPUT_OFLOOP: 'buklea',
                 LANG_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK: 'eten',
@@ -1900,6 +1984,11 @@
                 LANG_TEXT_SPECIAL_TOOLTIP: 'Karaktere bereziak idatzi.',
                 LANG_TEXT_COMMENT: 'Comment', //to translate
                 LANG_TEXT_COMMENT_TOOLTIP: 'Inserts a comment of one line in the program.', //to translate
+                LANG_TEXT_TO_INT: 'Converts to', //to translate
+                LANG_TEXT_TO_INT_INT: 'Integer', //to translate
+                LANG_TEXT_TO_INT_FLOAT: 'Float', //to translate
+                LANG_TEXT_TO_INT_TEXT: 'text', //to translate
+                LANG_TEXT_TO_INT_TOOLTIP: 'Convierts a text into an integer or a float.', //to translate
                 //advanced blocks :
                 LANG_CATEGORY_ADVANCED: 'PIN Funtzioak',
                 LANG_ADVANCED_INOUT_ANALOG_READ: 'PIN# pin analogikoa irakurri',
@@ -2106,7 +2195,32 @@
                 LANG_WIFI_CLOSE_SERVER: 'Wifi:stop server', //To translate
                 LANG_WIFI_CLOSE_SERVER_TOOLTIP: 'Shutdown TCP server.', //To translate
                 LANG_WIFI_CLOSE_CLIENT: 'Wifi:stop connection', //To translate
-                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.' //To translate
+                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.', //To translate
+                LANG_RF24_CONNECT: 'NRF24L01', //To translate
+                LANG_RF24_CONNECT_SEND: 'Send', //To translate
+                LANG_RF24_CONNECT_RECEIVE: 'Receive', //To translate
+                LANG_RF24_CONNECT_CE_PIN: 'CE Pin', //To translate
+                LANG_RF24_CONNECT_CSN_PIN: 'CSN Pin', //To translate
+                LANG_RF24_CONNECT_ADDRESS: 'Address pipe', //To translate
+                LANG_RF24_CONNECT_PIPE: 'Communication number (0-5)', //To translate
+                LANG_RF24_CONNECT_TOOLTIP: 'Connects using a wireless NRF24L01 device.', //To translate
+                LANG_RF24_SEND: 'NRF24L01 Send character', //To translate
+                LANG_RF24_SEND_TOOLTIP: 'Send a character stored in variable using a NRF24L01 connection.', //To translate
+                LANG_RF24_RECEIVE: 'NRF24L01 Receive character', //To translate
+                LANG_RF24_RECEIVE_TOOLTIP: 'Get a character received from a NRF24L01 and stores in a variable.', //To translate
+                //array blocks:
+                LANG_ARRAYS_GLOBAL: 'Declare GLOBAL array', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE: 'of type', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION: 'with', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION2: 'elements', //To translate
+                LANG_ARRAYS_GLOBAL_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements.', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT: 'and initial values', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements, with initial values.', //To translate
+                LANG_ARRAYS_LOCAL: 'Declare LOCAL array', //To translate
+                LANG_ARRAYS_GET: 'Element', //To translate
+                LANG_ARRAYS_GET_NAME: 'of array', //To translate
+                LANG_ARRAYS_GET_TOOLTIP: 'Get value of the element array.', //To translate
+                LANG_ARRAYS_SET_TOOLTIP: 'Set value for element array.' //To translate
             };
             // Node
             if (typeof module !== 'undefined' && module.exports) {
@@ -2306,10 +2420,10 @@
                 LANG_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL: 'jusqu’à',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_WHILE: 'Tant que la condition est vraie, exécuter les instructions.',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL: 'Tant que la condition est fausse, exécuter les instructions.',
-                LANG_CONTROLS_REPEAT_TITLE_REPEAT: 'Répéter',
-                LANG_CONTROLS_REPEAT_TITLE_TIMES: 'fois',
-                LANG_CONTROLS_REPEAT_INPUT_DO: 'exécuter',
-                LANG_CONTROLS_REPEAT_TOOLTIP: 'Répéter les instructions un certain nombre de fois',
+                LANG_CONTROLS_REPEAT: 'Repeat', //to translate
+                LANG_CONTROLS_REPEAT_TIMES: 'times', //to translate
+                LANG_CONTROLS_REPEAT_DO: 'do', //to translate
+                LANG_CONTROLS_REPEAT_TOOLTIP: 'Execute blocks a number of times.', //to translate
                 LANG_CONTROLS_FLOW_STATEMENTS_HELPURL: '',
                 LANG_CONTROLS_FLOW_STATEMENTS_INPUT_OFLOOP: 'la boucle',
                 LANG_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK: 'interrompre',
@@ -2413,6 +2527,11 @@
                 LANG_TEXT_SPECIAL_TOOLTIP: 'Utilise des caractères spéciaux.',
                 LANG_TEXT_COMMENT: 'Comment', //to translate
                 LANG_TEXT_COMMENT_TOOLTIP: 'Inserts a comment of one line in the program.', //to translate
+                LANG_TEXT_TO_INT: 'Converts to', //to translate
+                LANG_TEXT_TO_INT_INT: 'Integer', //to translate
+                LANG_TEXT_TO_INT_FLOAT: 'Float', //to translate
+                LANG_TEXT_TO_INT_TEXT: 'text', //to translate
+                LANG_TEXT_TO_INT_TOOLTIP: 'Convierts a text into an integer or a float.', //to translate
                 //advanced blocks :
                 LANG_CATEGORY_ADVANCED: 'Fonctions broche',
                 LANG_ADVANCED_INOUT_ANALOG_READ: 'Lire broche analogique#',
@@ -2620,7 +2739,32 @@
                 LANG_WIFI_CLOSE_SERVER: 'Wifi:stop server', //To translate
                 LANG_WIFI_CLOSE_SERVER_TOOLTIP: 'Shutdown TCP server.', //To translate
                 LANG_WIFI_CLOSE_CLIENT: 'Wifi:stop connection', //To translate
-                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.' //To translate
+                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.', //To translate
+                LANG_RF24_CONNECT: 'NRF24L01', //To translate
+                LANG_RF24_CONNECT_SEND: 'Send', //To translate
+                LANG_RF24_CONNECT_RECEIVE: 'Receive', //To translate
+                LANG_RF24_CONNECT_CE_PIN: 'CE Pin', //To translate
+                LANG_RF24_CONNECT_CSN_PIN: 'CSN Pin', //To translate
+                LANG_RF24_CONNECT_ADDRESS: 'Address pipe', //To translate
+                LANG_RF24_CONNECT_PIPE: 'Communication number (0-5)', //To translate
+                LANG_RF24_CONNECT_TOOLTIP: 'Connects using a wireless NRF24L01 device.', //To translate
+                LANG_RF24_SEND: 'NRF24L01 Send character', //To translate
+                LANG_RF24_SEND_TOOLTIP: 'Send a character stored in variable using a NRF24L01 connection.', //To translate
+                LANG_RF24_RECEIVE: 'NRF24L01 Receive character', //To translate
+                LANG_RF24_RECEIVE_TOOLTIP: 'Get a character received from a NRF24L01 and stores in a variable.', //To translate
+                //array blocks:
+                LANG_ARRAYS_GLOBAL: 'Declare GLOBAL array', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE: 'of type', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION: 'with', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION2: 'elements', //To translate
+                LANG_ARRAYS_GLOBAL_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements.', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT: 'and initial values', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements, with initial values.', //To translate
+                LANG_ARRAYS_LOCAL: 'Declare LOCAL array', //To translate
+                LANG_ARRAYS_GET: 'Element', //To translate
+                LANG_ARRAYS_GET_NAME: 'of array', //To translate
+                LANG_ARRAYS_GET_TOOLTIP: 'Get value of the element array.', //To translate
+                LANG_ARRAYS_SET_TOOLTIP: 'Set value for element array.' //To translate
             };
             // Node
             if (typeof module !== 'undefined' && module.exports) {
@@ -2820,10 +2964,10 @@
                 LANG_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL: 'ata',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_WHILE: 'Mentres a condición sexa verdadeira, executar as instrucións.',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL: 'Mentres a condición sexa falsa, executar as instrucións.',
-                LANG_CONTROLS_REPEAT_TITLE_REPEAT: 'Repetir',
-                LANG_CONTROLS_REPEAT_TITLE_TIMES: 'veces',
-                LANG_CONTROLS_REPEAT_INPUT_DO: 'executar',
-                LANG_CONTROLS_REPEAT_TOOLTIP: 'executar as instrucións un número determinado de veces.',
+                LANG_CONTROLS_REPEAT: 'Repeat', //to translate
+                LANG_CONTROLS_REPEAT_TIMES: 'times', //to translate
+                LANG_CONTROLS_REPEAT_DO: 'do', //to translate
+                LANG_CONTROLS_REPEAT_TOOLTIP: 'Execute blocks a number of times.', //to translate
                 LANG_CONTROLS_FLOW_STATEMENTS_HELPURL: '',
                 LANG_CONTROLS_FLOW_STATEMENTS_INPUT_OFLOOP: 'o bucle',
                 LANG_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK: 'interromper',
@@ -2927,6 +3071,11 @@
                 LANG_TEXT_SPECIAL_TOOLTIP: 'Escribe caracteres especiais.',
                 LANG_TEXT_COMMENT: 'Comment', //to translate
                 LANG_TEXT_COMMENT_TOOLTIP: 'Inserts a comment of one line in the program.', //to translate
+                LANG_TEXT_TO_INT: 'Converts to', //to translate
+                LANG_TEXT_TO_INT_INT: 'Integer', //to translate
+                LANG_TEXT_TO_INT_FLOAT: 'Float', //to translate
+                LANG_TEXT_TO_INT_TEXT: 'text', //to translate
+                LANG_TEXT_TO_INT_TOOLTIP: 'Convierts a text into an integer or a float.', //to translate
                 //advanced blocks :
                 LANG_CATEGORY_ADVANCED: 'Funcións PIN',
                 LANG_ADVANCED_INOUT_ANALOG_READ: 'Ler o pin analóxico PIN#',
@@ -3134,7 +3283,32 @@
                 LANG_WIFI_CLOSE_SERVER: 'Wifi:stop server', //To translate
                 LANG_WIFI_CLOSE_SERVER_TOOLTIP: 'Shutdown TCP server.', //To translate
                 LANG_WIFI_CLOSE_CLIENT: 'Wifi:stop connection', //To translate
-                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.' //To translate
+                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.', //To translate
+                LANG_RF24_CONNECT: 'NRF24L01', //To translate
+                LANG_RF24_CONNECT_SEND: 'Send', //To translate
+                LANG_RF24_CONNECT_RECEIVE: 'Receive', //To translate
+                LANG_RF24_CONNECT_CE_PIN: 'CE Pin', //To translate
+                LANG_RF24_CONNECT_CSN_PIN: 'CSN Pin', //To translate
+                LANG_RF24_CONNECT_ADDRESS: 'Address pipe', //To translate
+                LANG_RF24_CONNECT_PIPE: 'Communication number (0-5)', //To translate
+                LANG_RF24_CONNECT_TOOLTIP: 'Connects using a wireless NRF24L01 device.', //To translate
+                LANG_RF24_SEND: 'NRF24L01 Send character', //To translate
+                LANG_RF24_SEND_TOOLTIP: 'Send a character stored in variable using a NRF24L01 connection.', //To translate
+                LANG_RF24_RECEIVE: 'NRF24L01 Receive character', //To translate
+                LANG_RF24_RECEIVE_TOOLTIP: 'Get a character received from a NRF24L01 and stores in a variable.', //To translate
+                //array blocks:
+                LANG_ARRAYS_GLOBAL: 'Declare GLOBAL array', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE: 'of type', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION: 'with', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION2: 'elements', //To translate
+                LANG_ARRAYS_GLOBAL_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements.', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT: 'and initial values', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements, with initial values.', //To translate
+                LANG_ARRAYS_LOCAL: 'Declare LOCAL array', //To translate
+                LANG_ARRAYS_GET: 'Element', //To translate
+                LANG_ARRAYS_GET_NAME: 'of array', //To translate
+                LANG_ARRAYS_GET_TOOLTIP: 'Get value of the element array.', //To translate
+                LANG_ARRAYS_SET_TOOLTIP: 'Set value for element array.' //To translate
             };
             // Node
             if (typeof module !== 'undefined' && module.exports) {
@@ -3334,10 +3508,10 @@
                 LANG_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL: 'finchè',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_WHILE: 'Finché la condizione è vera, esegue il blocco.',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL: 'Finché la condizione è falsa, esegue il blocco.',
-                LANG_CONTROLS_REPEAT_TITLE_REPEAT: 'Ripetizione',
-                LANG_CONTROLS_REPEAT_TITLE_TIMES: 'Volte',
-                LANG_CONTROLS_REPEAT_INPUT_DO: 'esegui',
-                LANG_CONTROLS_REPEAT_TOOLTIP: 'Ripeti il blocco per un determinato numero di volte',
+                LANG_CONTROLS_REPEAT: 'Repeat', //to translate
+                LANG_CONTROLS_REPEAT_TIMES: 'times', //to translate
+                LANG_CONTROLS_REPEAT_DO: 'do', //to translate
+                LANG_CONTROLS_REPEAT_TOOLTIP: 'Execute blocks a number of times.', //to translate
                 LANG_CONTROLS_FLOW_STATEMENTS_HELPURL: '',
                 LANG_CONTROLS_FLOW_STATEMENTS_INPUT_OFLOOP: 'del ciclo',
                 LANG_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK: 'interrompi',
@@ -3441,6 +3615,11 @@
                 LANG_TEXT_SPECIAL_TOOLTIP: 'Scrive caratt. speciali',
                 LANG_TEXT_COMMENT: 'Comment', //to translate
                 LANG_TEXT_COMMENT_TOOLTIP: 'Inserts a comment of one line in the program.', //to translate
+                LANG_TEXT_TO_INT: 'Converts to', //to translate
+                LANG_TEXT_TO_INT_INT: 'Integer', //to translate
+                LANG_TEXT_TO_INT_FLOAT: 'Float', //to translate
+                LANG_TEXT_TO_INT_TEXT: 'text', //to translate
+                LANG_TEXT_TO_INT_TOOLTIP: 'Convierts a text into an integer or a float.', //to translate
                 //advanced blocks :
                 LANG_CATEGORY_ADVANCED: 'Funzioni Pin',
                 LANG_ADVANCED_INOUT_ANALOG_READ: 'Lettura Analogica PIN#',
@@ -3648,7 +3827,32 @@
                 LANG_WIFI_CLOSE_SERVER: 'Wifi:stop server', //To translate
                 LANG_WIFI_CLOSE_SERVER_TOOLTIP: 'Shutdown TCP server.', //To translate
                 LANG_WIFI_CLOSE_CLIENT: 'Wifi:stop connection', //To translate
-                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.' //To translate
+                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.', //To translate
+                LANG_RF24_CONNECT: 'NRF24L01', //To translate
+                LANG_RF24_CONNECT_SEND: 'Send', //To translate
+                LANG_RF24_CONNECT_RECEIVE: 'Receive', //To translate
+                LANG_RF24_CONNECT_CE_PIN: 'CE Pin', //To translate
+                LANG_RF24_CONNECT_CSN_PIN: 'CSN Pin', //To translate
+                LANG_RF24_CONNECT_ADDRESS: 'Address pipe', //To translate
+                LANG_RF24_CONNECT_PIPE: 'Communication number (0-5)', //To translate
+                LANG_RF24_CONNECT_TOOLTIP: 'Connects using a wireless NRF24L01 device.', //To translate
+                LANG_RF24_SEND: 'NRF24L01 Send character', //To translate
+                LANG_RF24_SEND_TOOLTIP: 'Send a character stored in variable using a NRF24L01 connection.', //To translate
+                LANG_RF24_RECEIVE: 'NRF24L01 Receive character', //To translate
+                LANG_RF24_RECEIVE_TOOLTIP: 'Get a character received from a NRF24L01 and stores in a variable.', //To translate
+                //array blocks:
+                LANG_ARRAYS_GLOBAL: 'Declare GLOBAL array', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE: 'of type', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION: 'with', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION2: 'elements', //To translate
+                LANG_ARRAYS_GLOBAL_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements.', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT: 'and initial values', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements, with initial values.', //To translate
+                LANG_ARRAYS_LOCAL: 'Declare LOCAL array', //To translate
+                LANG_ARRAYS_GET: 'Element', //To translate
+                LANG_ARRAYS_GET_NAME: 'of array', //To translate
+                LANG_ARRAYS_GET_TOOLTIP: 'Get value of the element array.', //To translate
+                LANG_ARRAYS_SET_TOOLTIP: 'Set value for element array.' //To translate
             };
             // Node
             if (typeof module !== 'undefined' && module.exports) {
@@ -3846,10 +4050,10 @@
                 LANG_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL: 'Aż do',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_WHILE: 'Dopóki warunek jest spełniony dopóty powtarzaj wykonanie bloku poleceń.',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL: 'Dopóki warunek nie jest spełniony dopóty powtarzaj wykonanie bloku poleceń.',
-                LANG_CONTROLS_REPEAT_TITLE_REPEAT: 'Powtórz',
-                LANG_CONTROLS_REPEAT_TITLE_TIMES: 'razy',
-                LANG_CONTROLS_REPEAT_INPUT_DO: 'rób',
-                LANG_CONTROLS_REPEAT_TOOLTIP: 'Powtórz polecenia określoną liczbę razy.',
+                LANG_CONTROLS_REPEAT: 'Repeat', //to translate
+                LANG_CONTROLS_REPEAT_TIMES: 'times', //to translate
+                LANG_CONTROLS_REPEAT_DO: 'do', //to translate
+                LANG_CONTROLS_REPEAT_TOOLTIP: 'Execute blocks a number of times.', //to translate
                 LANG_CONTROLS_FLOW_STATEMENTS_HELPURL: '',
                 LANG_CONTROLS_FLOW_STATEMENTS_INPUT_OFLOOP: 'pętlę',
                 LANG_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK: 'przerwij',
@@ -3953,6 +4157,11 @@
                 LANG_TEXT_SPECIAL_TOOLTIP: 'Wpisuje znaki specjalne.',
                 LANG_TEXT_COMMENT: 'Comment', //to translate
                 LANG_TEXT_COMMENT_TOOLTIP: 'Inserts a comment of one line in the program.', //to translate
+                LANG_TEXT_TO_INT: 'Converts to', //to translate
+                LANG_TEXT_TO_INT_INT: 'Integer', //to translate
+                LANG_TEXT_TO_INT_FLOAT: 'Float', //to translate
+                LANG_TEXT_TO_INT_TEXT: 'text', //to translate
+                LANG_TEXT_TO_INT_TOOLTIP: 'Convierts a text into an integer or a float.', //to translate
                 //bloki zaawansowane:
                 LANG_CATEGORY_ADVANCED: 'Funkcje portów',
                 LANG_ADVANCED_INOUT_ANALOG_READ: 'Odczyt analogowy PIN#',
@@ -4160,7 +4369,32 @@
                 LANG_WIFI_CLOSE_SERVER: 'Wifi:stop server', //To translate
                 LANG_WIFI_CLOSE_SERVER_TOOLTIP: 'Shutdown TCP server.', //To translate
                 LANG_WIFI_CLOSE_CLIENT: 'Wifi:stop connection', //To translate
-                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.' //To translate
+                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.', //To translate
+                LANG_RF24_CONNECT: 'NRF24L01', //To translate
+                LANG_RF24_CONNECT_SEND: 'Send', //To translate
+                LANG_RF24_CONNECT_RECEIVE: 'Receive', //To translate
+                LANG_RF24_CONNECT_CE_PIN: 'CE Pin', //To translate
+                LANG_RF24_CONNECT_CSN_PIN: 'CSN Pin', //To translate
+                LANG_RF24_CONNECT_ADDRESS: 'Address pipe', //To translate
+                LANG_RF24_CONNECT_PIPE: 'Communication number (0-5)', //To translate
+                LANG_RF24_CONNECT_TOOLTIP: 'Connects using a wireless NRF24L01 device.', //To translate
+                LANG_RF24_SEND: 'NRF24L01 Send character', //To translate
+                LANG_RF24_SEND_TOOLTIP: 'Send a character stored in variable using a NRF24L01 connection.', //To translate
+                LANG_RF24_RECEIVE: 'NRF24L01 Receive character', //To translate
+                LANG_RF24_RECEIVE_TOOLTIP: 'Get a character received from a NRF24L01 and stores in a variable.', //To translate
+                //array blocks:
+                LANG_ARRAYS_GLOBAL: 'Declare GLOBAL array', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE: 'of type', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION: 'with', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION2: 'elements', //To translate
+                LANG_ARRAYS_GLOBAL_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements.', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT: 'and initial values', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements, with initial values.', //To translate
+                LANG_ARRAYS_LOCAL: 'Declare LOCAL array', //To translate
+                LANG_ARRAYS_GET: 'Element', //To translate
+                LANG_ARRAYS_GET_NAME: 'of array', //To translate
+                LANG_ARRAYS_GET_TOOLTIP: 'Get value of the element array.', //To translate
+                LANG_ARRAYS_SET_TOOLTIP: 'Set value for element array.' //To translate
             };
             // Node
             if (typeof module !== 'undefined' && module.exports) {
@@ -4365,10 +4599,10 @@
                 LANG_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL: 'até',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_WHILE: 'Enquanto a condição for verdadeira, executar as instruções.',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL: 'Enquanto a condição for falsa, executar as instruções.',
-                LANG_CONTROLS_REPEAT_TITLE_REPEAT: 'Repetir',
-                LANG_CONTROLS_REPEAT_TITLE_TIMES: 'vezes',
-                LANG_CONTROLS_REPEAT_INPUT_DO: 'executar',
-                LANG_CONTROLS_REPEAT_TOOLTIP: 'executar as instruções um determinado número de vezes.',
+                LANG_CONTROLS_REPEAT: 'Repeat', //to translate
+                LANG_CONTROLS_REPEAT_TIMES: 'times', //to translate
+                LANG_CONTROLS_REPEAT_DO: 'do', //to translate
+                LANG_CONTROLS_REPEAT_TOOLTIP: 'Execute blocks a number of times.', //to translate
                 LANG_CONTROLS_FLOW_STATEMENTS_HELPURL: '',
                 LANG_CONTROLS_FLOW_STATEMENTS_INPUT_OFLOOP: '"loop"',
                 LANG_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK: 'interromper',
@@ -4472,6 +4706,11 @@
                 LANG_TEXT_SPECIAL_TOOLTIP: 'Escreve caracteres especiais.',
                 LANG_TEXT_COMMENT: 'Comment', //to translate
                 LANG_TEXT_COMMENT_TOOLTIP: 'Inserts a comment of one line in the program.', //to translate
+                LANG_TEXT_TO_INT: 'Converts to', //to translate
+                LANG_TEXT_TO_INT_INT: 'Integer', //to translate
+                LANG_TEXT_TO_INT_FLOAT: 'Float', //to translate
+                LANG_TEXT_TO_INT_TEXT: 'text', //to translate
+                LANG_TEXT_TO_INT_TOOLTIP: 'Convierts a text into an integer or a float.', //to translate
                 //advanced blocks :
                 LANG_CATEGORY_ADVANCED: 'Funções PIN',
                 LANG_ADVANCED_INOUT_ANALOG_READ: 'Ler o pino analógico PIN#',
@@ -4679,7 +4918,32 @@
                 LANG_WIFI_CLOSE_SERVER: 'Wifi:stop server', //To translate
                 LANG_WIFI_CLOSE_SERVER_TOOLTIP: 'Shutdown TCP server.', //To translate
                 LANG_WIFI_CLOSE_CLIENT: 'Wifi:stop connection', //To translate
-                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.' //To translate
+                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.', //To translate
+                LANG_RF24_CONNECT: 'NRF24L01', //To translate
+                LANG_RF24_CONNECT_SEND: 'Send', //To translate
+                LANG_RF24_CONNECT_RECEIVE: 'Receive', //To translate
+                LANG_RF24_CONNECT_CE_PIN: 'CE Pin', //To translate
+                LANG_RF24_CONNECT_CSN_PIN: 'CSN Pin', //To translate
+                LANG_RF24_CONNECT_ADDRESS: 'Address pipe', //To translate
+                LANG_RF24_CONNECT_PIPE: 'Communication number (0-5)', //To translate
+                LANG_RF24_CONNECT_TOOLTIP: 'Connects using a wireless NRF24L01 device.', //To translate
+                LANG_RF24_SEND: 'NRF24L01 Send character', //To translate
+                LANG_RF24_SEND_TOOLTIP: 'Send a character stored in variable using a NRF24L01 connection.', //To translate
+                LANG_RF24_RECEIVE: 'NRF24L01 Receive character', //To translate
+                LANG_RF24_RECEIVE_TOOLTIP: 'Get a character received from a NRF24L01 and stores in a variable.', //To translate
+                //array blocks:
+                LANG_ARRAYS_GLOBAL: 'Declare GLOBAL array', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE: 'of type', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION: 'with', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION2: 'elements', //To translate
+                LANG_ARRAYS_GLOBAL_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements.', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT: 'and initial values', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements, with initial values.', //To translate
+                LANG_ARRAYS_LOCAL: 'Declare LOCAL array', //To translate
+                LANG_ARRAYS_GET: 'Element', //To translate
+                LANG_ARRAYS_GET_NAME: 'of array', //To translate
+                LANG_ARRAYS_GET_TOOLTIP: 'Get value of the element array.', //To translate
+                LANG_ARRAYS_SET_TOOLTIP: 'Set value for element array.' //To translate
             };
             // Node
             if (typeof module !== 'undefined' && module.exports) {
@@ -4879,10 +5143,10 @@
                 LANG_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL: 'até',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_WHILE: 'Enquanto a condição for verdadera, executar as instruções.',
                 LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL: 'Enquanto a condição for falsa, executar as instruções.',
-                LANG_CONTROLS_REPEAT_TITLE_REPEAT: 'Repetir',
-                LANG_CONTROLS_REPEAT_TITLE_TIMES: 'vezes',
-                LANG_CONTROLS_REPEAT_INPUT_DO: 'executar',
-                LANG_CONTROLS_REPEAT_TOOLTIP: 'executar as instruções um determinado número de vezes.',
+                LANG_CONTROLS_REPEAT: 'Repeat', //to translate
+                LANG_CONTROLS_REPEAT_TIMES: 'times', //to translate
+                LANG_CONTROLS_REPEAT_DO: 'do', //to translate
+                LANG_CONTROLS_REPEAT_TOOLTIP: 'Execute blocks a number of times.', //to translate
                 LANG_CONTROLS_FLOW_STATEMENTS_HELPURL: '',
                 LANG_CONTROLS_FLOW_STATEMENTS_INPUT_OFLOOP: '"loop"',
                 LANG_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK: 'interromper',
@@ -4986,6 +5250,11 @@
                 LANG_TEXT_SPECIAL_TOOLTIP: 'Escreve caracteres especiais.',
                 LANG_TEXT_COMMENT: 'Comment', //to translate
                 LANG_TEXT_COMMENT_TOOLTIP: 'Inserts a comment of one line in the program.', //to translate
+                LANG_TEXT_TO_INT: 'Converts to', //to translate
+                LANG_TEXT_TO_INT_INT: 'Integer', //to translate
+                LANG_TEXT_TO_INT_FLOAT: 'Float', //to translate
+                LANG_TEXT_TO_INT_TEXT: 'text', //to translate
+                LANG_TEXT_TO_INT_TOOLTIP: 'Convierts a text into an integer or a float.', //to translate
                 //advanced blocks :
                 LANG_CATEGORY_ADVANCED: 'Funções PIN',
                 LANG_ADVANCED_INOUT_ANALOG_READ: 'Ler o pino analógico PIN#',
@@ -5193,7 +5462,32 @@
                 LANG_WIFI_CLOSE_SERVER: 'Wifi:stop server', //To translate
                 LANG_WIFI_CLOSE_SERVER_TOOLTIP: 'Shutdown TCP server.', //To translate
                 LANG_WIFI_CLOSE_CLIENT: 'Wifi:stop connection', //To translate
-                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.' //To translate
+                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.', //To translate
+                LANG_RF24_CONNECT: 'NRF24L01', //To translate
+                LANG_RF24_CONNECT_SEND: 'Send', //To translate
+                LANG_RF24_CONNECT_RECEIVE: 'Receive', //To translate
+                LANG_RF24_CONNECT_CE_PIN: 'CE Pin', //To translate
+                LANG_RF24_CONNECT_CSN_PIN: 'CSN Pin', //To translate
+                LANG_RF24_CONNECT_ADDRESS: 'Address pipe', //To translate
+                LANG_RF24_CONNECT_PIPE: 'Communication number (0-5)', //To translate
+                LANG_RF24_CONNECT_TOOLTIP: 'Connects using a wireless NRF24L01 device.', //To translate
+                LANG_RF24_SEND: 'NRF24L01 Send character', //To translate
+                LANG_RF24_SEND_TOOLTIP: 'Send a character stored in variable using a NRF24L01 connection.', //To translate
+                LANG_RF24_RECEIVE: 'NRF24L01 Receive character', //To translate
+                LANG_RF24_RECEIVE_TOOLTIP: 'Get a character received from a NRF24L01 and stores in a variable.', //To translate
+                //array blocks:
+                LANG_ARRAYS_GLOBAL: 'Declare GLOBAL array', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE: 'of type', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION: 'with', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION2: 'elements', //To translate
+                LANG_ARRAYS_GLOBAL_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements.', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT: 'and initial values', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements, with initial values.', //To translate
+                LANG_ARRAYS_LOCAL: 'Declare LOCAL array', //To translate
+                LANG_ARRAYS_GET: 'Element', //To translate
+                LANG_ARRAYS_GET_NAME: 'of array', //To translate
+                LANG_ARRAYS_GET_TOOLTIP: 'Get value of the element array.', //To translate
+                LANG_ARRAYS_SET_TOOLTIP: 'Set value for element array.' //To translate
             };
             // Node
             if (typeof module !== 'undefined' && module.exports) {
@@ -5393,10 +5687,10 @@
                         LANG_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL: 'до',
                         LANG_CONTROLS_WHILEUNTIL_TOOLTIP_WHILE: 'В то время как состояние истинно, выполнить инструкции ',
                         LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL: 'В то время как условие ложно, выполните инструкции',
-                        LANG_CONTROLS_REPEAT_TITLE_REPEAT: 'Повторить',
-                        LANG_CONTROLS_REPEAT_TITLE_TIMES: 'раз',
-                        LANG_CONTROLS_REPEAT_INPUT_DO: 'Выполнить',
-                        LANG_CONTROLS_REPEAT_TOOLTIP: 'выполнить инструкции несколько раз.',
+                LANG_CONTROLS_REPEAT: 'Repeat', //to translate
+                LANG_CONTROLS_REPEAT_TIMES: 'times', //to translate
+                LANG_CONTROLS_REPEAT_DO: 'do', //to translate
+                LANG_CONTROLS_REPEAT_TOOLTIP: 'Execute blocks a number of times.', //to translate
                         LANG_CONTROLS_FLOW_STATEMENTS_HELPURL: '',
                         LANG_CONTROLS_FLOW_STATEMENTS_INPUT_OFLOOP: ' "петля" ',
                         LANG_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK: 'остановить',
@@ -5500,6 +5794,11 @@
                         LANG_TEXT_SPECIAL_TOOLTIP: 'Написать специальные символы.',
                 LANG_TEXT_COMMENT: 'Comment', //to translate
                 LANG_TEXT_COMMENT_TOOLTIP: 'Inserts a comment of one line in the program.', //to translate
+                LANG_TEXT_TO_INT: 'Converts to', //to translate
+                LANG_TEXT_TO_INT_INT: 'Integer', //to translate
+                LANG_TEXT_TO_INT_FLOAT: 'Float', //to translate
+                LANG_TEXT_TO_INT_TEXT: 'text', //to translate
+                LANG_TEXT_TO_INT_TOOLTIP: 'Convierts a text into an integer or a float.', //to translate
                          // Расширенные блоки:
                         LANG_CATEGORY_ADVANCED: 'Функции портов',
                         LANG_ADVANCED_INOUT_ANALOG_READ: 'Читать значение аналогового PIN # ',
@@ -5707,7 +6006,32 @@
                 LANG_WIFI_CLOSE_SERVER: 'Wifi:stop server', //To translate
                 LANG_WIFI_CLOSE_SERVER_TOOLTIP: 'Shutdown TCP server.', //To translate
                 LANG_WIFI_CLOSE_CLIENT: 'Wifi:stop connection', //To translate
-                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.' //To translate
+                LANG_WIFI_CLOSE_CLIENT_TOOLTIP: 'Shutdown connection with TCP server.', //To translate
+                LANG_RF24_CONNECT: 'NRF24L01', //To translate
+                LANG_RF24_CONNECT_SEND: 'Send', //To translate
+                LANG_RF24_CONNECT_RECEIVE: 'Receive', //To translate
+                LANG_RF24_CONNECT_CE_PIN: 'CE Pin', //To translate
+                LANG_RF24_CONNECT_CSN_PIN: 'CSN Pin', //To translate
+                LANG_RF24_CONNECT_ADDRESS: 'Address pipe', //To translate
+                LANG_RF24_CONNECT_PIPE: 'Communication number (0-5)', //To translate
+                LANG_RF24_CONNECT_TOOLTIP: 'Connects using a wireless NRF24L01 device.', //To translate
+                LANG_RF24_SEND: 'NRF24L01 Send character', //To translate
+                LANG_RF24_SEND_TOOLTIP: 'Send a character stored in variable using a NRF24L01 connection.', //To translate
+                LANG_RF24_RECEIVE: 'NRF24L01 Receive character', //To translate
+                LANG_RF24_RECEIVE_TOOLTIP: 'Get a character received from a NRF24L01 and stores in a variable.', //To translate
+                //array blocks:
+                LANG_ARRAYS_GLOBAL: 'Declare GLOBAL array', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE: 'of type', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION: 'with', //To translate
+                LANG_ARRAYS_GLOBAL_DIMENSION2: 'elements', //To translate
+                LANG_ARRAYS_GLOBAL_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements.', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT: 'and initial values', //To translate
+                LANG_ARRAYS_GLOBAL_TYPE_INIT_TOOLTIP: 'Declares and defines a GLOBAL array of the specified type and number of elements, with initial values.', //To translate
+                LANG_ARRAYS_LOCAL: 'Declare LOCAL array', //To translate
+                LANG_ARRAYS_GET: 'Element', //To translate
+                LANG_ARRAYS_GET_NAME: 'of array', //To translate
+                LANG_ARRAYS_GET_TOOLTIP: 'Get value of the element array.', //To translate
+                LANG_ARRAYS_SET_TOOLTIP: 'Set value for element array.' //To translate
             };
             // Node
             if (typeof module !== 'undefined' && module.exports) {
@@ -6087,6 +6411,23 @@
             return __p
         };
 
+        this["JST"]["arrays_set"] = function(obj) {
+            obj || (obj = {});
+            var __t, __p = '',
+                __e = _.escape;
+            with(obj) {
+                __p += 'vectors_' +
+                    ((__t = (varName)) == null ? '' : __t) +
+                    '[' +
+                    ((__t = (varElement)) == null ? '' : __t) +
+                    ']=' +
+                    ((__t = (varValue)) == null ? '' : __t) +
+                    ';\n';
+
+            }
+            return __p
+        };
+
         this["JST"]["base_delay"] = function(obj) {
             obj || (obj = {});
             var __t, __p = '',
@@ -6229,9 +6570,9 @@
             var __t, __p = '',
                 __e = _.escape;
             with(obj) {
-                __p += 'pinMode(' +
+                __p += '//pinMode(' +
                     ((__t = (dropdown_pin)) == null ? '' : __t) +
-                    ',INPUT);\npinMode(' +
+                    ',INPUT);\n//pinMode(' +
                     ((__t = (NextPIN)) == null ? '' : __t) +
                     ', OUTPUT);\nblueToothSerial.begin(' +
                     ((__t = (baud_rate)) == null ? '' : __t) +
@@ -6726,7 +7067,9 @@
             var __t, __p = '',
                 __e = _.escape;
             with(obj) {
-                __p += 'lcd_char_' +
+                __p += 'byte lcd_char_' +
+                    ((__t = (index)) == null ? '' : __t) +
+                    '[8];\nlcd_char_' +
                     ((__t = (index)) == null ? '' : __t) +
                     '[0]=B' +
                     ((__t = (row1)) == null ? '' : __t) +
@@ -7250,6 +7593,86 @@
             return __p
         };
 
+        this["JST"]["rf24_connect_declare"] = function(obj) {
+            obj || (obj = {});
+            var __t, __p = '',
+                __e = _.escape;
+            with(obj) {
+                __p += 'RF24 radio(' +
+                    ((__t = (ce_pin)) == null ? '' : __t) +
+                    ',' +
+                    ((__t = (csn_pin)) == null ? '' : __t) +
+                    ');\n';
+
+            }
+            return __p
+        };
+
+        this["JST"]["rf24_connect_definitions"] = function(obj) {
+            obj || (obj = {});
+            var __t, __p = '',
+                __e = _.escape;
+            with(obj) {
+                __p += '#include <nRF24L01.h>\n#include <RF24.h>\n#include <RF24_config.h>\n#include <SPI.h>\n';
+
+            }
+            return __p
+        };
+
+        this["JST"]["rf24_connect_setups_receive"] = function(obj) {
+            obj || (obj = {});
+            var __t, __p = '',
+                __e = _.escape;
+            with(obj) {
+                __p += 'radio.begin();\nradio.openReadingPipe(' +
+                    ((__t = (pipe)) == null ? '' : __t) +
+                    ',' +
+                    ((__t = (address)) == null ? '' : __t) +
+                    ');\nradio.startListening();\n';
+
+            }
+            return __p
+        };
+
+        this["JST"]["rf24_connect_setups_send"] = function(obj) {
+            obj || (obj = {});
+            var __t, __p = '',
+                __e = _.escape;
+            with(obj) {
+                __p += 'radio.begin();\nradio.openWritingPipe(' +
+                    ((__t = (address)) == null ? '' : __t) +
+                    ');\n';
+
+            }
+            return __p
+        };
+
+        this["JST"]["rf24_receive"] = function(obj) {
+            obj || (obj = {});
+            var __t, __p = '',
+                __e = _.escape;
+            with(obj) {
+                __p += 'radio.read(&' +
+                    ((__t = (varName)) == null ? '' : __t) +
+                    ',sizeof(char));\n';
+
+            }
+            return __p
+        };
+
+        this["JST"]["rf24_send"] = function(obj) {
+            obj || (obj = {});
+            var __t, __p = '',
+                __e = _.escape;
+            with(obj) {
+                __p += 'radio.write(&' +
+                    ((__t = (varName)) == null ? '' : __t) +
+                    ',sizeof(char));\n';
+
+            }
+            return __p
+        };
+
         this["JST"]["serial_available"] = function(obj) {
             obj || (obj = {});
             var __t, __p = '',
@@ -7604,6 +8027,19 @@
             var __t, __p = '',
                 __e = _.escape;
             with(obj) {
+                __p += '/*' +
+                    ((__t = (argument0)) == null ? '' : __t) +
+                    '*/';
+
+            }
+            return __p
+        };
+
+        this["JST"]["text_comment_inline_definitions"] = function(obj) {
+            obj || (obj = {});
+            var __t, __p = '',
+                __e = _.escape;
+            with(obj) {
                 __p += '//' +
                     ((__t = (argument0)) == null ? '' : __t);
 
@@ -7651,6 +8087,21 @@
                     ',' +
                     ((__t = (to)) == null ? '' : __t) +
                     ')';
+
+            }
+            return __p
+        };
+
+        this["JST"]["text_toint"] = function(obj) {
+            obj || (obj = {});
+            var __t, __p = '',
+                __e = _.escape;
+            with(obj) {
+                __p +=
+                    ((__t = (argument0)) == null ? '' : __t) +
+                    '.' +
+                    ((__t = (type)) == null ? '' : __t) +
+                    '()';
 
             }
             return __p
@@ -8158,44 +8609,51 @@
             }
         };
 
-        // Source: src/blocks/array_get/array_get.js
+        // Source: src/blocks/arrays_get/arrays_get.js
         /* global Blockly, RoboBlocks */
         /* jshint sub:true */
         /**
-         * array_get code generation
+         * arrays_get code generation
          * @return {String} Code generated with block parameters
          */
-        Blockly.Arduino.array_get = function() {
-            // Numeric value.
-            var variable = this.getFieldValue('VAR');
-            var index = this.getFieldValue('INDEX');
-            var code = variable + '[' + index + ']';
-            // -4.abs() returns -4 in Dart due to strange order of operation choices.
-            // -4 is actually an operator and a number.  Reflect this in the order.
-            // var order = code < 0 ? Blockly.Arduino.ORDER_UNARY_PREFIX : Blockly.Arduino.ORDER_ATOMIC;
-            return [code, Blockly.Arduino.ORDER_ATOMIC];
+        Blockly.Arduino.arrays_get = function() {
+            var varName = this.getFieldValue('VAR') || '';
+            var varElement = Blockly.Arduino.valueToCode(this, 'VAR_ELEMENT', Blockly.Arduino.ORDER_ASSIGNMENT) || 0;
+
+            var code = '';
+            var a = RoboBlocks.findPinMode(varElement);
+            code += a['code'];
+            varElement = a['pin'];
+
+            if (RoboBlocks.variables[this.getFieldValue('VAR')] !== undefined) {
+                this.var_type = RoboBlocks.variables[this.getFieldValue('VAR')][0];
+            }
+            return ['vectors_' + varName + '[' + varElement + ']', Blockly.Arduino.ORDER_ATOMIC];
         };
-        Blockly.Blocks.array_get = {
-            // Numeric value.
-            category: RoboBlocks.locales.getKey('LANG_CATEGORY_VARIABLES'),
+        Blockly.Blocks.arrays_get = {
+            category: RoboBlocks.locales.getKey('LANG_CATEGORY_VARIABLES'), // Variables are handled specially.
             helpUrl: RoboBlocks.URL_VAR,
             init: function() {
                 this.setColour(RoboBlocks.LANG_COLOUR_VARIABLES);
-                this.appendDummyInput('DUMMY').appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_GET')).appendField(new Blockly.FieldVariable(' '), 'VAR');
-                // .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR');
-                this.appendDummyInput('DUMMY2').appendField(RoboBlocks.locales.getKey('LANG_ARRAY_GET_BRACKET1')).appendField(new Blockly.FieldTextInput('0', Blockly.Blocks.array_get.validator), 'INDEX').appendField(RoboBlocks.locales.getKey('LANG_ARRAY_GET_BRACKET2'));
-                this.setOutput(true, Number);
+                this.appendValueInput('VAR_ELEMENT').appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GET'));
+                this.appendDummyInput('DUMMY').appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GET_NAME'))
+                    .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR').setAlign(Blockly.ALIGN_RIGHT);
+                //  .appendField(new Blockly.FieldVariable(' '), 'VAR');
+                this.setOutput(true);
                 this.setInputsInline(true);
-                this.setTooltip(RoboBlocks.locales.getKey('LANG_ARRAY_GET_TOOLTIP'));
+                this.setTooltip(RoboBlocks.locales.getKey('LANG_ARRAYS_GET_TOOLTIP'));
             },
             getVariables: function() {
                 var variables = Blockly.Variables.allVariables();
                 var dropdown = [];
-                if (variables.length > 0) {
-                    for (var i in variables) {
-                        dropdown.push([variables[i], variables[i]]);
+                var item_found = false;
+                for (var i in variables) {
+                    if (variables[i].substr(0, 8) === 'vectors_') {
+                        dropdown.push([variables[i].substr(8), variables[i].substr(8)]);
+                        item_found = true;
                     }
-                } else {
+                }
+                if (!item_found) {
                     dropdown.push(['', '']);
                 }
                 return dropdown;
@@ -8214,10 +8672,9 @@
                     if (Blockly.Variables.allVariables()[i] !== this.last_variables[i]) {
                         try {
                             this.removeInput('DUMMY');
-                            this.removeInput('DUMMY2');
                         } catch (e) {}
-                        this.appendDummyInput('DUMMY').appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_GET')).appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR');
-                        this.appendDummyInput('DUMMY2').appendField(RoboBlocks.locales.getKey('LANG_ARRAY_GET_BRACKET1')).appendField(new Blockly.FieldTextInput('0', Blockly.Blocks.array_get.validator), 'INDEX').appendField(RoboBlocks.locales.getKey('LANG_ARRAY_GET_BRACKET2'));
+                        this.appendDummyInput('DUMMY').appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GET_NAME'))
+                            .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR').setAlign(Blockly.ALIGN_RIGHT);
                         this.setFieldValue(this.last_variable, 'VAR');
                         this.last_variables = Blockly.Variables.allVariables();
                     }
@@ -8236,21 +8693,588 @@
                 }
             },
             exists: function() {
-                if (this.getFieldValue('VAR')) {
-                    for (var i in Blockly.Variables.allVariables()) {
-                        if (Blockly.Variables.allVariables()[i] === this.getFieldValue('VAR')) {
-                            return true;
-                        }
+                for (var i in Blockly.Variables.allVariables()) {
+                    if (Blockly.Variables.allVariables()[i] === 'vectors_' + this.getFieldValue('VAR')) {
+                        return true;
                     }
                 }
                 return false;
             }
         };
-        Blockly.Blocks.array_get.validator = function(text) {
-            // Ensure that only a number may be entered.
-            // TODO: Handle cases like 'o', 'ten', '1,234', '3,14', etc.
-            var n = window.parseFloat(text || 0);
-            return window.isNaN(n) ? null : String(n);
+        // Source: src/blocks/arrays_global_type/arrays_global_type.js
+        /* global Blockly,  RoboBlocks */
+        /* jshint sub:true */
+        /**
+         * arrays_global_type code generation
+         * @return {String} Code generated with block parameters
+         */
+        Blockly.Arduino.arrays_global_type = function() {
+            var varType = this.getFieldValue('VAR_TYPE');
+            var varName = this.getFieldValue('VAR_NAME') || '';
+            var varDim = this.getFieldValue('VAR_DIM');
+
+            Blockly.Arduino.definitions_['declare_var_vectors_' + varName] = varType + ' vectors_' + varName + '[' + varDim + '];\n';
+
+            RoboBlocks.variables['vectors_' + varName] = [varType, 'global'];
+            RoboBlocks.variables['analogRead(vectors_' + varName + ')'] = [varType, 'global'];
+            RoboBlocks.variables['digitalRead(vectors_' + varName + ')'] = [varType, 'global'];
+
+            return '';
+        };
+
+        Blockly.Blocks.arrays_global_type = {
+            // Vector setter.
+            category: RoboBlocks.locales.getKey('LANG_CATEGORY_VARIABLES'),
+            helpUrl: RoboBlocks.URL_VAR,
+            init: function() {
+                this.setColour(RoboBlocks.LANG_COLOUR_VARIABLES);
+                this.appendDummyInput().
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL')).
+                appendField(new Blockly.FieldTextInput(''), 'VAR_NAME').
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_TYPE')).
+                appendField(new Blockly.FieldDropdown([
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_INTEGER'), 'int'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_INTEGER_LONG'), 'long'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_INTEGER_ULONG'), 'unsigned long'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_BYTE'), 'byte'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_FLOAT'), 'float'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_CHAR'), 'char'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_BOOLEAN'), 'boolean'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_STRING'), 'String'],
+                ]), 'VAR_TYPE').
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_DIMENSION')).
+                appendField(new Blockly.FieldTextInput(''), 'VAR_DIM').
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_DIMENSION2'));
+                this.setInputsInline(false);
+                //this.setPreviousStatement(true);
+                //this.setNextStatement(true);
+                this.setTooltip(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_TOOLTIP'));
+            },
+            getVars: function() {
+                return ['vectors_' + this.getFieldValue('VAR_NAME')];
+            },
+            renameVar: function(oldName, newName) {
+                if (Blockly.Names.equals(oldName, this.getFieldValue('VAR_NAME'))) {
+                    this.setFieldValue(newName, 'VAR_NAME');
+                }
+            },
+            //isVariable: function(varValue) {
+            //    for (var i in Blockly.Variables.allVariables()) {
+            //        if (Blockly.Variables.allVariables()['vectors_' + i] === varValue) {
+            //            return true;
+            //        }
+            //    }
+            //    return false;
+            //},
+            validName: function(name) {
+                if (name && name.length > 0) {
+                    var i = 0;
+                    while (i < name.length) {
+                        if (!isNaN(parseFloat(name[i]))) {
+                            name = name.substring(1, name.length);
+                        } else {
+                            break;
+                        }
+                    }
+                    name = name.replace(/([ ])/g, '_');
+                    name = name.replace(/([áàâä])/g, 'a');
+                    name = name.replace(/([éèêë])/g, 'e');
+                    name = name.replace(/([íìîï])/g, 'i');
+                    name = name.replace(/([óòôö])/g, 'o');
+                    name = name.replace(/([úùûü])/g, 'u');
+                    name = name.replace(/([ñ])/g, 'n');
+                    name = name.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|<>\-\&\Ç\%\=\~\{\}\¿\¡\"\@\:\;\-\"\·\|\º\ª\¨\'\·\̣\─\ç\`\´\¨\^])/g, '');
+                    i = 0;
+                    while (i < name.length) {
+                        if (!isNaN(parseFloat(name[i]))) {
+                            name = name.substring(1, name.length);
+                        } else {
+                            break;
+                        }
+                    }
+                    for (var j in Blockly.Arduino.RESERVED_WORDS_) {
+                        var reserved_words = Blockly.Arduino.RESERVED_WORDS_.split(',');
+                        if (name === reserved_words[j]) {
+                            this.setWarningText(RoboBlocks.locales.getKey('LANG_RESERVED_WORDS'));
+                            name = '';
+                            break;
+                        } else {
+                            this.setWarningText(null);
+                        }
+                    }
+                }
+                return name;
+            },
+            onchange: function() {
+                if (this.last_variable !== this.getFieldValue('VAR_NAME')) {
+                    var name = this.getFieldValue('VAR_NAME');
+                    name = this.validName(name);
+                    try {
+                        this.setFieldValue(name, 'VAR_NAME');
+                    } catch (e) {}
+                    this.last_variable = name;
+                }
+            }
+        };
+
+        // Source: src/blocks/arrays_global_type_init/arrays_global_type_init.js
+        /* global Blockly,  RoboBlocks */
+        /* jshint sub:true */
+        /**
+         * arrays_global_type_init code generation
+         * @return {String} Code generated with block parameters
+         */
+        Blockly.Arduino.arrays_global_type_init = function() {
+            var varType = this.getFieldValue('VAR_TYPE');
+            var varName = this.getFieldValue('VAR_NAME') || '';
+            var varDim = this.getFieldValue('VAR_DIM') || 0;
+
+            var declaration = varType + ' vectors_' + varName + '[]=';
+            if (varDim === 0) {
+                declaration = declaration + 'null;\n';
+            } else {
+                declaration = declaration + '{';
+                for (var i = 0; i < varDim; i++) {
+                    var varValue = this.getFieldValue('VAR_VALUE_' + i) || 0;
+                    if (i > 0) {
+                        declaration = declaration + ',';
+                    }
+                    declaration = declaration + varValue;
+                }
+                declaration = declaration + '};\n';
+            }
+
+            Blockly.Arduino.definitions_['declare_var_vectors_' + varName] = declaration;
+
+            RoboBlocks.variables['vectors_' + varName] = [varType, 'global'];
+            RoboBlocks.variables['analogRead(vectors_' + varName + ')'] = [varType, 'global'];
+            RoboBlocks.variables['digitalRead(vectors_' + varName + ')'] = [varType, 'global'];
+
+            return '';
+        };
+
+        Blockly.Blocks.arrays_global_type_init = {
+            // Vector setter.
+            category: RoboBlocks.locales.getKey('LANG_CATEGORY_VARIABLES'),
+            helpUrl: RoboBlocks.URL_VAR,
+            init: function() {
+                this.setColour(RoboBlocks.LANG_COLOUR_VARIABLES);
+                this.appendDummyInput().
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL')).
+                appendField(new Blockly.FieldTextInput(''), 'VAR_NAME').
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_TYPE')).
+                appendField(new Blockly.FieldDropdown([
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_INTEGER'), 'int'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_INTEGER_LONG'), 'long'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_INTEGER_ULONG'), 'unsigned long'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_BYTE'), 'byte'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_FLOAT'), 'float'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_CHAR'), 'char'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_BOOLEAN'), 'boolean'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_STRING'), 'String'],
+                ]), 'VAR_TYPE').
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_DIMENSION')).
+                appendField(new Blockly.FieldTextInput(''), 'VAR_DIM').
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_DIMENSION2')).
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_TYPE_INIT'));
+                this.last_dimension = this.getFieldValue('VAR_DIM');
+                this.previous_dimension = this.last_dimension;
+                if (this.last_dimension > 0) {
+                    this.appendDummyInput('VALUES_0').appendField(new Blockly.FieldTextInput(''), 'VAR_VALUE_0');
+                    for (var i = 1; i < this.last_dimension; i++) {
+                        this.appendDummyInput('VALUES_' + i).appendField(new Blockly.FieldTextInput(''), 'VAR_VALUE_' + i);
+                    }
+                }
+                this.setInputsInline(true);
+                this.setTooltip(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_TYPE_INIT_TOOLTIP'));
+            },
+            check_dimension: function() {
+                var i = 0;
+                for (i = 0; i < this.previous_dimension; i++) {
+                    try {
+                        this.removeInput('VALUES_' + i);
+                    } catch (e) {}
+                }
+                this.previous_dimension = this.last_dimension;
+                if (this.last_dimension > 0) {
+                    for (i = 0; i < this.last_dimension; i++) {
+                        this.appendDummyInput('VALUES_' + i).appendField(new Blockly.FieldTextInput(''), 'VAR_VALUE_' + i);
+                    }
+                }
+            },
+            getVars: function() {
+                return ['vectors_' + this.getFieldValue('VAR_NAME')];
+            },
+            renameVar: function(oldName, newName) {
+                if (Blockly.Names.equals(oldName, this.getFieldValue('VAR_NAME'))) {
+                    this.setFieldValue(newName, 'VAR_NAME');
+                }
+            },
+            //isVariable: function(varValue) {
+            //    for (var i in Blockly.Variables.allVariables()) {
+            //        if (Blockly.Variables.allVariables()['vectors_' + i] === varValue) {
+            //            return true;
+            //        }
+            //    }
+            //    return false;
+            //},
+            validName: function(name) {
+                if (name && name.length > 0) {
+                    var i = 0;
+                    while (i < name.length) {
+                        if (!isNaN(parseFloat(name[i]))) {
+                            name = name.substring(1, name.length);
+                        } else {
+                            break;
+                        }
+                    }
+                    name = name.replace(/([ ])/g, '_');
+                    name = name.replace(/([áàâä])/g, 'a');
+                    name = name.replace(/([éèêë])/g, 'e');
+                    name = name.replace(/([íìîï])/g, 'i');
+                    name = name.replace(/([óòôö])/g, 'o');
+                    name = name.replace(/([úùûü])/g, 'u');
+                    name = name.replace(/([ñ])/g, 'n');
+                    name = name.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|<>\-\&\Ç\%\=\~\{\}\¿\¡\"\@\:\;\-\"\·\|\º\ª\¨\'\·\̣\─\ç\`\´\¨\^])/g, '');
+                    i = 0;
+                    while (i < name.length) {
+                        if (!isNaN(parseFloat(name[i]))) {
+                            name = name.substring(1, name.length);
+                        } else {
+                            break;
+                        }
+                    }
+                    for (var j in Blockly.Arduino.RESERVED_WORDS_) {
+                        var reserved_words = Blockly.Arduino.RESERVED_WORDS_.split(',');
+                        if (name === reserved_words[j]) {
+                            this.setWarningText(RoboBlocks.locales.getKey('LANG_RESERVED_WORDS'));
+                            name = '';
+                            break;
+                        } else {
+                            this.setWarningText(null);
+                        }
+                    }
+                }
+                return name;
+            },
+            onchange: function() {
+                if (this.last_variable !== this.getFieldValue('VAR_NAME')) {
+                    var name = this.getFieldValue('VAR_NAME');
+                    name = this.validName(name);
+                    try {
+                        this.setFieldValue(name, 'VAR_NAME');
+                    } catch (e) {}
+                    this.last_variable = name;
+                }
+                if (this.last_dimension !== this.getFieldValue('VAR_DIM')) {
+                    this.last_dimension = this.getFieldValue('VAR_DIM');
+                    this.check_dimension();
+                }
+            },
+            mutationToDom: function() {
+                var container = document.createElement('mutation');
+                container.setAttribute('dimension', this.last_dimension);
+                return container;
+            },
+            domToMutation: function(xmlElement) {
+                var dimension = xmlElement.getAttribute('dimension');
+                if (dimension && dimension !== 'undefined') {
+                    this.last_dimension = dimension;
+                }
+                this.check_dimension();
+            }
+        };
+
+        // Source: src/blocks/arrays_local_type/arrays_local_type.js
+        /* global Blockly,  RoboBlocks */
+        /* jshint sub:true */
+        /**
+         * arrays_local_type code generation
+         * @return {String} Code generated with block parameters
+         */
+        Blockly.Arduino.arrays_local_type = function() {
+            var varType = this.getFieldValue('VAR_TYPE');
+            var varName = this.getFieldValue('VAR_NAME') || '';
+            var varDim = this.getFieldValue('VAR_DIM');
+            var code = '';
+
+            code += varType + ' ' + varName + '[' + varDim + '];\n';
+
+            RoboBlocks.variables['vectors_' + varName] = [varType, 'local'];
+            RoboBlocks.variables['analogRead(vectors_' + varName + ')'] = [varType, 'local'];
+            RoboBlocks.variables['digitalRead(vectors_' + varName + ')'] = [varType, 'local'];
+
+            return code;
+        };
+
+        Blockly.Blocks.arrays_local_type = {
+            category: RoboBlocks.locales.getKey('LANG_CATEGORY_VARIABLES'),
+            helpUrl: RoboBlocks.URL_VAR,
+            init: function() {
+                this.setColour(RoboBlocks.LANG_COLOUR_VARIABLES);
+                this.appendDummyInput().
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_LOCAL')).
+                appendField(new Blockly.FieldTextInput(''), 'VAR_NAME').
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_TYPE')).
+                appendField(new Blockly.FieldDropdown([
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_INTEGER'), 'int'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_INTEGER_LONG'), 'long'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_INTEGER_ULONG'), 'unsigned long'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_BYTE'), 'byte'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_FLOAT'), 'float'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_CHAR'), 'char'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_BOOLEAN'), 'boolean'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_STRING'), 'String'],
+                ]), 'VAR_TYPE').
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_DIMENSION')).
+                appendField(new Blockly.FieldTextInput(''), 'VAR_DIM').
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_DIMENSION2'));
+                this.setInputsInline(false);
+                this.setPreviousStatement(true);
+                this.setNextStatement(true);
+                this.setTooltip(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_TOOLTIP'));
+            },
+            getVars: function() {
+                return ['vectors_' + this.getFieldValue('VAR_NAME')];
+            },
+            renameVar: function(oldName, newName) {
+                if (Blockly.Names.equals(oldName, this.getFieldValue('VAR_NAME'))) {
+                    this.setFieldValue(newName, 'VAR_NAME');
+                }
+            },
+            //isVariable: Blockly.Blocks.arrays_global_type.isVariable,
+            onchange: Blockly.Blocks.arrays_global_type.onchange,
+            validName: Blockly.Blocks.arrays_global_type.validName
+        };
+
+        // Source: src/blocks/arrays_local_type_init/arrays_local_type_init.js
+        /* global Blockly,  RoboBlocks */
+        /* jshint sub:true */
+        /**
+         * arrays_local_type_init code generation
+         * @return {String} Code generated with block parameters
+         */
+        Blockly.Arduino.arrays_local_type_init = function() {
+            var varType = this.getFieldValue('VAR_TYPE');
+            var varName = this.getFieldValue('VAR_NAME') || '';
+            var varDim = this.getFieldValue('VAR_DIM') || 0;
+
+            var declaration = varType + ' vectors_' + varName + '[]=';
+            if (varDim === 0) {
+                declaration = declaration + 'null;\n';
+            } else {
+                declaration = declaration + '{';
+                for (var i = 0; i < varDim; i++) {
+                    var varValue = this.getFieldValue('VAR_VALUE_' + i) || 0;
+                    if (i > 0) {
+                        declaration = declaration + ',';
+                    }
+                    declaration = declaration + varValue;
+                }
+                declaration = declaration + '};\n';
+            }
+
+            var code = declaration;
+
+            RoboBlocks.variables['vectors_' + varName] = [varType, 'local'];
+            RoboBlocks.variables['analogRead(vectors_' + varName + ')'] = [varType, 'local'];
+            RoboBlocks.variables['digitalRead(vectors_' + varName + ')'] = [varType, 'local'];
+
+            return code;
+        };
+
+        Blockly.Blocks.arrays_local_type_init = {
+            category: RoboBlocks.locales.getKey('LANG_CATEGORY_VARIABLES'),
+            helpUrl: RoboBlocks.URL_VAR,
+            init: function() {
+                this.setColour(RoboBlocks.LANG_COLOUR_VARIABLES);
+                this.appendDummyInput().
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_LOCAL')).
+                appendField(new Blockly.FieldTextInput(''), 'VAR_NAME').
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_TYPE')).
+                appendField(new Blockly.FieldDropdown([
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_INTEGER'), 'int'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_INTEGER_LONG'), 'long'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_INTEGER_ULONG'), 'unsigned long'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_BYTE'), 'byte'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_FLOAT'), 'float'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_CHAR'), 'char'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_BOOLEAN'), 'boolean'],
+                    [RoboBlocks.locales.getKey('LANG_VARIABLES_TYPE_STRING'), 'String'],
+                ]), 'VAR_TYPE').
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_DIMENSION')).
+                appendField(new Blockly.FieldTextInput(''), 'VAR_DIM').
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_DIMENSION2')).
+                appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_TYPE_INIT'));
+                this.last_dimension = this.getFieldValue('VAR_DIM');
+                this.previous_dimension = this.last_dimension;
+                if (this.last_dimension > 0) {
+                    this.appendDummyInput('VALUES_0').appendField(new Blockly.FieldTextInput(''), 'VAR_VALUE_0');
+                    for (var i = 1; i < this.last_dimension; i++) {
+                        this.appendDummyInput('VALUES_' + i).appendField(new Blockly.FieldTextInput(''), 'VAR_VALUE_' + i);
+                    }
+                }
+                this.setInputsInline(true);
+                this.setPreviousStatement(true);
+                this.setNextStatement(true);
+                this.setTooltip(RoboBlocks.locales.getKey('LANG_ARRAYS_GLOBAL_TYPE_INIT_TOOLTIP'));
+            },
+            check_dimension: function() {
+                var i = 0;
+                for (i = 0; i < this.previous_dimension; i++) {
+                    try {
+                        this.removeInput('VALUES_' + i);
+                    } catch (e) {}
+                }
+                this.previous_dimension = this.last_dimension;
+                if (this.last_dimension > 0) {
+                    for (i = 0; i < this.last_dimension; i++) {
+                        this.appendDummyInput('VALUES_' + i).appendField(new Blockly.FieldTextInput(''), 'VAR_VALUE_' + i);
+                    }
+                }
+            },
+            getVars: function() {
+                return ['vectors_' + this.getFieldValue('VAR_NAME')];
+            },
+            renameVar: function(oldName, newName) {
+                if (Blockly.Names.equals(oldName, this.getFieldValue('VAR_NAME'))) {
+                    this.setFieldValue(newName, 'VAR_NAME');
+                }
+            },
+            //isVariable: Blockly.Blocks.arrays_global_type_init.isVariable,
+            validName: Blockly.Blocks.arrays_global_type_init.validName,
+            onchange: function() {
+                if (this.last_variable !== this.getFieldValue('VAR_NAME')) {
+                    var name = this.getFieldValue('VAR_NAME');
+                    name = this.validName(name);
+                    try {
+                        this.setFieldValue(name, 'VAR_NAME');
+                    } catch (e) {}
+                    this.last_variable = name;
+                }
+                if (this.last_dimension !== this.getFieldValue('VAR_DIM')) {
+                    this.last_dimension = this.getFieldValue('VAR_DIM');
+                    this.check_dimension();
+                }
+            },
+            mutationToDom: function() {
+                var container = document.createElement('mutation');
+                container.setAttribute('dimension', this.last_dimension);
+                return container;
+            },
+            domToMutation: function(xmlElement) {
+                var dimension = xmlElement.getAttribute('dimension');
+                if (dimension && dimension !== 'undefined') {
+                    this.last_dimension = dimension;
+                }
+                this.check_dimension();
+            }
+        };
+
+        // Source: src/blocks/arrays_set/arrays_set.js
+        /* global Blockly, JST, RoboBlocks */
+        /* jshint sub:true */
+        /**
+         * arrays_set code generation
+         * @return {String} Code generated with block parameters
+         */
+        Blockly.Arduino.arrays_set = function() {
+            var varValue = Blockly.Arduino.valueToCode(this, 'VALUE', Blockly.Arduino.ORDER_ASSIGNMENT) || '';
+            var varName = this.getFieldValue('VAR') || '';
+            var varElement = Blockly.Arduino.valueToCode(this, 'VAR_ELEMENT', Blockly.Arduino.ORDER_ASSIGNMENT) || 0;
+            var code = '';
+
+            var a = RoboBlocks.findPinMode(varValue);
+            code += a['code'];
+            varValue = a['pin'];
+            var b = RoboBlocks.findPinMode(varElement);
+            code += b['code'];
+            varElement = b['pin'];
+
+            code += JST['arrays_set']({
+                'varName': varName,
+                'varElement': varElement,
+                'varValue': varValue
+            });
+            return code;
+        };
+        Blockly.Blocks.arrays_set = {
+            category: RoboBlocks.locales.getKey('LANG_CATEGORY_VARIABLES'), // Variables are handled specially.
+            helpUrl: RoboBlocks.URL_VAR,
+            init: function() {
+                this.setColour(RoboBlocks.LANG_COLOUR_VARIABLES);
+                this.appendValueInput('VAR_ELEMENT').appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GET'));
+                this.appendValueInput('VALUE').appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GET_NAME'))
+                    .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR').appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_SET_AS'), 'DUMMY_SET_AS').setAlign(Blockly.ALIGN_RIGHT);
+                //.appendField(new Blockly.FieldVariable(' '), 'VAR').appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_SET_AS')).setAlign(Blockly.ALIGN_RIGHT);
+                this.setInputsInline(true);
+                this.setPreviousStatement(true);
+                this.setNextStatement(true);
+                this.setTooltip(RoboBlocks.locales.getKey('LANG_ARRAYS_SET_TOOLTIP'));
+            },
+            getVariables: function() {
+                var variables = Blockly.Variables.allVariables();
+                var dropdown = [];
+                var item_found = false;
+                for (var i in variables) {
+                    if (variables[i].substr(0, 8) === 'vectors_') {
+                        dropdown.push([variables[i].substr(8), variables[i].substr(8)]);
+                        item_found = true;
+                    }
+                }
+                if (!item_found) {
+                    dropdown.push(['', '']);
+                }
+                return dropdown;
+            },
+            onchange: function() {
+                if (!this.workspace) {
+                    // Block has been deleted.
+                    return;
+                }
+                this.last_variable = this.getFieldValue('VAR');
+                if (!this.last_variables) {
+                    this.last_variables = Blockly.Variables.allVariables();
+                }
+                var variables = Blockly.Variables.allVariables();
+                for (var i in variables) {
+                    if (Blockly.Variables.allVariables()[i] !== this.last_variables[i]) {
+                        try {
+                            var blockInput = this.getInput('VALUE');
+                            blockInput.removeField('VAR');
+                            blockInput.removeField('DUMMY_SET_AS');
+                            blockInput.appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR');
+                            blockInput.appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_SET_AS'), 'DUMMY_SET_AS');
+
+                            //this.removeInput('VALUE');
+                            //this.appendValueInput('VALUE').appendField(RoboBlocks.locales.getKey('LANG_ARRAYS_GET_NAME'))
+                            //.appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR').appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_SET_AS')).setAlign(Blockly.ALIGN_RIGHT);
+                            this.setFieldValue(this.last_variable, 'VAR');
+                        } catch (e) {}
+                        this.last_variables = Blockly.Variables.allVariables();
+                    }
+                }
+                try {
+                    if (!this.exists()) {
+                        this.setWarningText(RoboBlocks.locales.getKey('LANG_VARIABLES_CALL_WITHOUT_DEFINITION'));
+                    } else {
+                        this.setWarningText(null);
+                    }
+                } catch (e) {}
+            },
+            renameVar: function(oldName, newName) {
+                if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
+                    this.setTitleValue(newName, 'VAR');
+                }
+            },
+            exists: function() {
+                for (var i in Blockly.Variables.allVariables()) {
+                    if (Blockly.Variables.allVariables()[i] === 'vectors_' + this.getFieldValue('VAR')) {
+                        return true;
+                    }
+                }
+                return false;
+            }
         };
         // Source: src/blocks/base_delay/base_delay.js
         /* global Blockly, JST, RoboBlocks */
@@ -9273,6 +10297,44 @@
 
 
 
+        // Source: src/blocks/controls_repeat/controls_repeat.js
+        /* global Blockly, RoboBlocks */
+        /* jshint sub:true */
+        /**
+         * controls_repeat code generation
+         * @return {String} Code generated with block parameters
+         */
+        Blockly.Arduino.controls_repeat = function() {
+            var number = Blockly.Arduino.valueToCode(this, 'NUMBER', Blockly.Arduino.ORDER_ASSIGNMENT) || '';
+            var branch = Blockly.Arduino.statementToCode(this, 'DO');
+            if (Blockly.Arduino.INFINITE_LOOP_TRAP) {
+                branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g, '\'' + this.id + '\'') + branch;
+            }
+
+            var code = '';
+            var a = RoboBlocks.findPinMode(number);
+            code += a['code'];
+            number = a['pin'];
+
+            code += 'for (int zz_ii = 0; zz_ii < ' + number + '; zz_ii++ ) {\n' + branch + '}\n';
+            return code;
+        };
+        Blockly.Blocks.controls_repeat = {
+            // Repeat loop.
+            category: RoboBlocks.locales.getKey('LANG_CATEGORY_CONTROLS'),
+            helpUrl: RoboBlocks.URL_REPEAT,
+            init: function() {
+                this.setColour(RoboBlocks.LANG_COLOUR_CONTROL);
+                this.appendValueInput('NUMBER', Number)
+                    .appendField(RoboBlocks.locales.getKey('LANG_CONTROLS_REPEAT'));
+                this.appendDummyInput().appendField(RoboBlocks.locales.getKey('LANG_CONTROLS_REPEAT_TIMES'));
+                this.appendStatementInput('DO').appendField(RoboBlocks.locales.getKey('LANG_CONTROLS_REPEAT_DO'));
+                this.setPreviousStatement(true);
+                this.setNextStatement(true);
+                this.setInputsInline(true);
+                this.setTooltip(RoboBlocks.locales.getKey('LANG_CONTROLS_REPEAT_TOOLTIP'));
+            }
+        };
         // Source: src/blocks/controls_setupLoop/controls_setupLoop.js
         /* global Blockly, JST, RoboBlocks */
         /* jshint sub:true */
@@ -13006,6 +14068,281 @@
             }
         };
 
+        // Source: src/blocks/rf24_connect/rf24_connect.js
+        /* global Blockly, JST, options, RoboBlocks */
+        /* jshint sub:true */
+        /**
+         * rf24_connect code generation
+         * @return {String} Code generated with block parameters
+         */
+        Blockly.Arduino.rf24_connect = function() {
+            var conn_type = this.getFieldValue('CONN_TYPE');
+            var ce_pin = Blockly.Arduino.valueToCode(this, 'CE_PIN', Blockly.Arduino.ORDER_ATOMIC);
+            var csn_pin = Blockly.Arduino.valueToCode(this, 'CSN_PIN', Blockly.Arduino.ORDER_ATOMIC);
+            var address = Blockly.Arduino.valueToCode(this, 'ADDRESS', Blockly.Arduino.ORDER_ATOMIC);
+            var pipe = Blockly.Arduino.valueToCode(this, 'PIPE', Blockly.Arduino.ORDER_ATOMIC);
+            var code = '';
+            Blockly.Arduino.definitions_['define_rf24_connect'] = JST['rf24_connect_definitions']({});
+            Blockly.Arduino.definitions_['declare_var_rf24'] = JST['rf24_connect_declare']({
+                'ce_pin': ce_pin,
+                'csn_pin': csn_pin
+            });
+            if (conn_type === '1') {
+                Blockly.Arduino.setups_['setup_rf24_connect'] = JST['rf24_connect_setups_send']({
+                    'address': address
+                });
+            } else {
+                Blockly.Arduino.setups_['setup_rf24_connect'] = JST['rf24_connect_setups_receive']({
+                    'address': address,
+                    'pipe': pipe
+                });
+            }
+            return [code, Blockly.Arduino.ORDER_ATOMIC];
+        };
+        /**
+         * rf24_connect block definition
+         * @type {Object}
+         */
+        Blockly.Blocks.rf24_connect = {
+            category: RoboBlocks.locales.getKey('LANG_CATEGORY_COMMUNICATION'),
+            tags: ['nrf24l01'],
+            helpUrl: RoboBlocks.URL_US,
+            init: function() {
+                this.setColour(RoboBlocks.LANG_COLOUR_COMMUNICATION);
+                this.appendDummyInput('').appendField(RoboBlocks.locales.getKey('LANG_RF24_CONNECT')).appendField(new Blockly.FieldImage('img/blocks/nrf24l01.png', 208 * options.zoom, 140 * options.zoom))
+                    .appendField(new Blockly.FieldDropdown([
+                        [RoboBlocks.locales.getKey('LANG_RF24_CONNECT_SEND') || 'SEND', '1'],
+                        [RoboBlocks.locales.getKey('LANG_RF24_CONNECT_RECEIVE') || 'RECEIVE', '2']
+                    ]), 'CONN_TYPE');
+                this.appendValueInput('CE_PIN').setCheck(Number).appendField(RoboBlocks.locales.getKey('LANG_RF24_CONNECT_CE_PIN')).setCheck(Number).setAlign(Blockly.ALIGN_RIGHT);
+                this.appendValueInput('CSN_PIN').setCheck(Number).appendField(RoboBlocks.locales.getKey('LANG_RF24_CONNECT_CSN_PIN')).setCheck(Number).setAlign(Blockly.ALIGN_RIGHT);
+                this.appendValueInput('ADDRESS').setCheck(Number).appendField(RoboBlocks.locales.getKey('LANG_RF24_CONNECT_ADDRESS')).setCheck(Number).setAlign(Blockly.ALIGN_RIGHT);
+                this.last_conn_type = this.getFieldValue('CONN_TYPE');
+                this.check_conn_type();
+                this.setInputsInline(false);
+                this.setOutput(false);
+                this.setTooltip(RoboBlocks.locales.getKey('LANG_RF24_CONNECT_TOOLTIP'));
+            },
+            check_conn_type: function() {
+                if (this.getInput('PIPE')) {
+                    this.removeInput('PIPE');
+                }
+                if (this.last_conn_type === '2') {
+                    this.appendValueInput('PIPE').setCheck(Number).appendField(RoboBlocks.locales.getKey('LANG_RF24_CONNECT_PIPE')).setCheck(Number).setAlign(Blockly.ALIGN_RIGHT);
+                }
+            },
+            onchange: function() {
+                if (this.getFieldValue('CONN_TYPE') !== this.last_conn_type) {
+                    this.last_conn_type = this.getFieldValue('CONN_TYPE');
+                    this.check_conn_type();
+                }
+            },
+            mutationToDom: function() {
+                var container = document.createElement('mutation');
+                container.setAttribute('connection_type', this.last_conn_type);
+                return container;
+            },
+            domToMutation: function(xmlElement) {
+                var connectionType = xmlElement.getAttribute('connection_type');
+                if (connectionType && connectionType !== 'undefined') {
+                    this.last_conn_type = connectionType;
+                }
+                this.check_conn_type();
+            }
+        };
+
+        // Source: src/blocks/rf24_receive/rf24_receive.js
+        /* global Blockly, JST, RoboBlocks */
+        /* jshint sub:true */
+        /**
+         * rf24_receive code generation
+         * @return {String} Code generated with block parameters
+         */
+        Blockly.Arduino.rf24_receive = function() {
+            var varName = this.getFieldValue('VAR') || '';
+            var code = '';
+            var a = RoboBlocks.findPinMode(varName);
+            code += a['code'];
+            varName = a['pin'];
+            code += JST['rf24_receive']({
+                'varName': varName
+            });
+            return code;
+        };
+        /**
+         * rf24_receive block definition
+         * @type {Object}
+         */
+        Blockly.Blocks.rf24_receive = {
+            category: RoboBlocks.locales.getKey('LANG_CATEGORY_COMMUNICATION'),
+            helpUrl: RoboBlocks.URL_SERIE,
+            tags: ['serial'],
+            /**
+             * rf24_receive initialization
+             */
+            init: function() {
+                this.setColour(RoboBlocks.LANG_COLOUR_COMMUNICATION);
+                this.appendDummyInput('DUMMY').appendField(RoboBlocks.locales.getKey('LANG_RF24_RECEIVE'))
+                    .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR').setAlign(Blockly.ALIGN_RIGHT);
+                //.appendField(new Blockly.FieldVariable(' '), 'VAR').setAlign(Blockly.ALIGN_RIGHT);
+                this.setPreviousStatement(true, null);
+                this.setNextStatement(true, null);
+                this.setTooltip(RoboBlocks.locales.getKey('LANG_RF24_RECEIVE_TOOLTIP'));
+            },
+            getVariables: function() {
+                var variables = Blockly.Variables.allVariables();
+                var dropdown = [];
+                var item_found = false;
+                for (var i in variables) {
+                    if (variables[i].substr(0, 8) !== 'vectors_') {
+                        dropdown.push([variables[i], variables[i]]);
+                        item_found = true;
+                    }
+                }
+                if (!item_found) {
+                    dropdown.push(['', '']);
+                }
+                return dropdown;
+            },
+            onchange: function() {
+                if (!this.workspace) {
+                    // Block has been deleted.
+                    return;
+                }
+                this.last_variable = this.getFieldValue('VAR');
+                if (!this.last_variables) {
+                    this.last_variables = Blockly.Variables.allVariables();
+                }
+                var variables = Blockly.Variables.allVariables();
+                for (var i in variables) {
+                    if (Blockly.Variables.allVariables()[i] !== this.last_variables[i]) {
+                        try {
+                            this.removeInput('DUMMY');
+                            this.appendDummyInput('DUMMY').appendField(RoboBlocks.locales.getKey('LANG_RF24_RECEIVE'))
+                                .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR').setAlign(Blockly.ALIGN_RIGHT);
+                            this.setFieldValue(this.last_variable, 'VAR');
+                        } catch (e) {}
+                        this.last_variables = Blockly.Variables.allVariables();
+                    }
+                }
+                try {
+                    if (!this.exists()) {
+                        this.setWarningText(RoboBlocks.locales.getKey('LANG_VARIABLES_CALL_WITHOUT_DEFINITION'));
+                    } else {
+                        this.setWarningText(null);
+                    }
+                } catch (e) {}
+            },
+            renameVar: function(oldName, newName) {
+                if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
+                    this.setTitleValue(newName, 'VAR');
+                }
+            },
+            exists: function() {
+                for (var i in Blockly.Variables.allVariables()) {
+                    if (Blockly.Variables.allVariables()[i] === this.getFieldValue('VAR')) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        };
+        // Source: src/blocks/rf24_send/rf24_send.js
+        /* global Blockly, JST, RoboBlocks */
+        /* jshint sub:true */
+        /**
+         * rf24_send code generation
+         * @return {String} Code generated with block parameters
+         */
+        Blockly.Arduino.rf24_send = function() {
+            var varName = this.getFieldValue('VAR') || '';
+            var code = '';
+            var a = RoboBlocks.findPinMode(varName);
+            code += a['code'];
+            varName = a['pin'];
+            code += JST['rf24_send']({
+                'varName': varName
+            });
+            return code;
+        };
+        /**
+         * rf24_send block definition
+         * @type {Object}
+         */
+        Blockly.Blocks.rf24_send = {
+            category: RoboBlocks.locales.getKey('LANG_CATEGORY_COMMUNICATION'),
+            helpUrl: RoboBlocks.URL_SERIE,
+            tags: ['serial'],
+            /**
+             * rf24_send initialization
+             */
+            init: function() {
+                this.setColour(RoboBlocks.LANG_COLOUR_COMMUNICATION);
+                this.appendDummyInput('DUMMY').appendField(RoboBlocks.locales.getKey('LANG_RF24_SEND'))
+                    .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR').setAlign(Blockly.ALIGN_RIGHT);
+                //.appendField(new Blockly.FieldVariable(' '), 'VAR').setAlign(Blockly.ALIGN_RIGHT);
+                this.setPreviousStatement(true, null);
+                this.setNextStatement(true, null);
+                this.setTooltip(RoboBlocks.locales.getKey('LANG_RF24_SEND_TOOLTIP'));
+            },
+            getVariables: function() {
+                var variables = Blockly.Variables.allVariables();
+                var dropdown = [];
+                var item_found = false;
+                for (var i in variables) {
+                    if (variables[i].substr(0, 8) !== 'vectors_') {
+                        dropdown.push([variables[i], variables[i]]);
+                        item_found = true;
+                    }
+                }
+                if (!item_found) {
+                    dropdown.push(['', '']);
+                }
+                return dropdown;
+            },
+            onchange: function() {
+                if (!this.workspace) {
+                    // Block has been deleted.
+                    return;
+                }
+                this.last_variable = this.getFieldValue('VAR');
+                if (!this.last_variables) {
+                    this.last_variables = Blockly.Variables.allVariables();
+                }
+                var variables = Blockly.Variables.allVariables();
+                for (var i in variables) {
+                    if (Blockly.Variables.allVariables()[i] !== this.last_variables[i]) {
+                        try {
+                            this.removeInput('DUMMY');
+                            this.appendDummyInput('DUMMY').appendField(RoboBlocks.locales.getKey('LANG_RF24_SEND'))
+                                .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR').setAlign(Blockly.ALIGN_RIGHT);
+                            this.setFieldValue(this.last_variable, 'VAR');
+                        } catch (e) {}
+                        this.last_variables = Blockly.Variables.allVariables();
+                    }
+                }
+                try {
+                    if (!this.exists()) {
+                        this.setWarningText(RoboBlocks.locales.getKey('LANG_VARIABLES_CALL_WITHOUT_DEFINITION'));
+                    } else {
+                        this.setWarningText(null);
+                    }
+                } catch (e) {}
+            },
+            renameVar: function(oldName, newName) {
+                if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
+                    this.setTitleValue(newName, 'VAR');
+                }
+            },
+            exists: function() {
+                for (var i in Blockly.Variables.allVariables()) {
+                    if (Blockly.Variables.allVariables()[i] === this.getFieldValue('VAR')) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        };
         // Source: src/blocks/serial_available/serial_available.js
         /* global Blockly, JST, RoboBlocks */
         /* jshint sub:true */
@@ -13874,7 +15211,7 @@
             }
         };
         // Source: src/blocks/text_comment/text_comment.js
-        /* global Blockly, RoboBlocks */
+        /* global Blockly, JST, RoboBlocks */
 
         /**
          * text_comment code generation
@@ -13882,9 +15219,13 @@
          */
         Blockly.Arduino.text_comment = function() {
             var argument0 = this.getFieldValue('COMMENT');
-            var code = '//' + argument0 + '\n';
+            //var code = '//' + argument0 + '\n';
             //Blockly.Arduino.definitions_['declare_text_comment'] = '/*' + argument0 + '*/\n';
-            return [code, Blockly.Arduino.ORDER_ATOMIC];
+            Blockly.Arduino.definitions_['declare_var_text_comment'] = JST['text_comment_definitions']({
+                'argument0': argument0
+            });
+            //return [code, Blockly.Arduino.ORDER_ATOMIC];
+            return '';
         };
 
         Blockly.Blocks.text_comment = {
@@ -13897,6 +15238,36 @@
                     .appendField(new Blockly.FieldTextInput(''), 'COMMENT');
                 this.setPreviousStatement(false);
                 this.setNextStatement(false);
+                this.setInputsInline(true);
+                this.setTooltip(RoboBlocks.locales.getKey('LANG_TEXT_COMMENT_TOOLTIP'));
+            }
+        };
+
+        // Source: src/blocks/text_comment_inline/text_comment_inline.js
+        /* global Blockly, RoboBlocks */
+
+        /**
+         * text_comment_inline code generation
+         * @return {String} Code generated with block parameters
+         */
+        Blockly.Arduino.text_comment_inline = function() {
+            var argument0 = this.getFieldValue('COMMENT');
+            var code = '//' + argument0 + '\n';
+            //Blockly.Arduino.definitions_['declare_text_comment'] = '/*' + argument0 + '*/\n';
+            //return [code, Blockly.Arduino.ORDER_ATOMIC];
+            return code;
+        };
+
+        Blockly.Blocks.text_comment_inline = {
+            category: RoboBlocks.locales.getKey('LANG_CATEGORY_TEXT'),
+            helpUrl: RoboBlocks.URL_TEXT,
+            init: function() {
+                this.setColour(RoboBlocks.LANG_COLOUR_TEXT);
+                this.appendDummyInput()
+                    .appendField(RoboBlocks.locales.getKey('LANG_TEXT_COMMENT'))
+                    .appendField(new Blockly.FieldTextInput(''), 'COMMENT');
+                this.setPreviousStatement(true);
+                this.setNextStatement(true);
                 this.setInputsInline(true);
                 this.setTooltip(RoboBlocks.locales.getKey('LANG_TEXT_COMMENT_TOOLTIP'));
             }
@@ -14247,6 +15618,47 @@
                 this.setTooltip(RoboBlocks.locales.getKey('LANG_TEXT_SUBSTRING_TOOLTIP'));
             }
         };
+        // Source: src/blocks/text_toint/text_toint.js
+        /* global Blockly, JST, RoboBlocks */
+
+        /**
+         * text_toint code generation
+         * @return {String} Code generated with block parameters
+         */
+
+        Blockly.Arduino.text_toint = function() {
+            var type = this.getFieldValue('TYPE');
+            var argument0 = Blockly.Arduino.valueToCode(this, 'VALUE', Blockly.Arduino.ORDER_UNARY_POSTFIX) || '';
+            var code = '';
+            var a = RoboBlocks.findPinMode(argument0);
+            code += a['code'];
+            argument0 = a['pin'];
+
+            code += JST['text_toint']({
+                'type': type,
+                'argument0': argument0
+            });
+
+            return [code, Blockly.Arduino.ORDER_UNARY_POSTFIX];
+        };
+
+        Blockly.Blocks.text_toint = {
+            category: RoboBlocks.locales.getKey('LANG_CATEGORY_TEXT'),
+            helpUrl: RoboBlocks.URL_TEXT,
+            init: function() {
+                this.setColour(RoboBlocks.LANG_COLOUR_TEXT);
+                this.appendValueInput('VALUE')
+                    .setCheck([String, Array])
+                    .appendField(RoboBlocks.locales.getKey('LANG_TEXT_TO_INT'))
+                    .appendField(new Blockly.FieldDropdown([
+                        [RoboBlocks.locales.getKey('LANG_TEXT_TO_INT_INT') || 'toInt', 'toInt'],
+                        [RoboBlocks.locales.getKey('LANG_TEXT_TO_INT_FLOAT') || 'toFloat', 'toFloat']
+                    ]), 'TYPE')
+                    .appendField(RoboBlocks.locales.getKey('LANG_TEXT_TO_INT_TEXT'));
+                this.setOutput(true, Number);
+                this.setTooltip(RoboBlocks.locales.getKey('LANG_TEXT_TO_INT_TOOLTIP'));
+            }
+        };
         // Source: src/blocks/variables_get/variables_get.js
         /* global Blockly, RoboBlocks */
         /* jshint sub:true */
@@ -14269,45 +15681,48 @@
             init: function() {
                 this.setColour(RoboBlocks.LANG_COLOUR_VARIABLES);
                 this.appendDummyInput('DUMMY').appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_GET'))
-                    // .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR');
-                    .appendField(new Blockly.FieldVariable(' '), 'VAR');
+                    .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR');
+                //  .appendField(new Blockly.FieldVariable(' '), 'VAR');
                 this.setOutput(true);
                 this.setTooltip(RoboBlocks.locales.getKey('LANG_VARIABLES_GET_TOOLTIP'));
             },
             getVariables: function() {
                 var variables = Blockly.Variables.allVariables();
                 var dropdown = [];
-                if (variables.length > 0) {
-                    for (var i in variables) {
+                var item_found = false;
+                for (var i in variables) {
+                    if (variables[i].substr(0, 8) !== 'vectors_') {
                         dropdown.push([variables[i], variables[i]]);
+                        item_found = true;
                     }
-                } else {
+                }
+                if (!item_found) {
                     dropdown.push(['', '']);
                 }
                 return dropdown;
             },
             onchange: function() {
-                // if (!this.workspace) {
-                //     // Block has been deleted.
-                //     return;
-                // }
-                // this.last_variable=this.getFieldValue('VAR');
-                // if (!this.last_variables){
-                //     this.last_variables=Blockly.Variables.allVariables();
-                // }
-                // var variables=Blockly.Variables.allVariables();
-                // for (var i in variables){
-                //     if (Blockly.Variables.allVariables()[i]!==this.last_variables[i]){
-                //         try{
-                //             this.removeInput('DUMMY');
-                //         }catch(e){}
-                //         this.appendDummyInput('DUMMY')
-                //             .appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_GET'))
-                //             .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR');
-                //         this.setFieldValue(this.last_variable, 'VAR');
-                //         this.last_variables=Blockly.Variables.allVariables();
-                //     }
-                // }
+                if (!this.workspace) {
+                    // Block has been deleted.
+                    return;
+                }
+                this.last_variable = this.getFieldValue('VAR');
+                if (!this.last_variables) {
+                    this.last_variables = Blockly.Variables.allVariables();
+                }
+                var variables = Blockly.Variables.allVariables();
+                for (var i in variables) {
+                    if (Blockly.Variables.allVariables()[i] !== this.last_variables[i]) {
+                        try {
+                            this.removeInput('DUMMY');
+                        } catch (e) {}
+                        this.appendDummyInput('DUMMY')
+                            .appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_GET'))
+                            .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR');
+                        this.setFieldValue(this.last_variable, 'VAR');
+                        this.last_variables = Blockly.Variables.allVariables();
+                    }
+                }
                 try {
                     if (!this.exists()) {
                         this.setWarningText(RoboBlocks.locales.getKey('LANG_VARIABLES_CALL_WITHOUT_DEFINITION'));
@@ -14810,8 +16225,8 @@
             init: function() {
                 this.setColour(RoboBlocks.LANG_COLOUR_VARIABLES);
                 this.appendValueInput('VALUE').appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_SET'))
-                    // .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR')
-                    .appendField(new Blockly.FieldVariable(' '), 'VAR').appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_SET_AS')).setAlign(Blockly.ALIGN_RIGHT);
+                    .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR').appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_SET_AS'), 'DUMMY_SET_AS').setAlign(Blockly.ALIGN_RIGHT);
+                //.appendField(new Blockly.FieldVariable(' '), 'VAR').appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_SET_AS')).setAlign(Blockly.ALIGN_RIGHT);
                 this.setInputsInline(false);
                 this.setPreviousStatement(true);
                 this.setNextStatement(true);
@@ -14820,11 +16235,14 @@
             getVariables: function() {
                 var variables = Blockly.Variables.allVariables();
                 var dropdown = [];
-                if (variables.length > 0) {
-                    for (var i in variables) {
+                var item_found = false;
+                for (var i in variables) {
+                    if (variables[i].substr(0, 8) !== 'vectors_') {
                         dropdown.push([variables[i], variables[i]]);
+                        item_found = true;
                     }
-                } else {
+                }
+                if (!item_found) {
                     dropdown.push(['', '']);
                 }
                 return dropdown;
@@ -14834,26 +16252,24 @@
                     // Block has been deleted.
                     return;
                 }
-                // this.last_variable=this.getFieldValue('VAR');
-                // if (!this.last_variables){
-                //     this.last_variables=Blockly.Variables.allVariables();
-                // }
-                // var variables=Blockly.Variables.allVariables();
-                // for (var i in variables){
-                //     if (Blockly.Variables.allVariables()[i]!==this.last_variables[i]){
-                //         try{
-                //             this.removeInput('VALUE');
-                //             this.appendValueInput('VALUE')
-                //                 .appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_SET'))
-                //                 .appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR')
-                //                 .appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_SET_AS'))
-                //                 .setAlign(Blockly.ALIGN_RIGHT);
-                //             this.setInputsInline(false);
-                //             this.setFieldValue(this.last_variable, 'VAR');
-                //         }catch(e){}
-                //         this.last_variables=Blockly.Variables.allVariables();
-                //     }
-                // }
+                this.last_variable = this.getFieldValue('VAR');
+                if (!this.last_variables) {
+                    this.last_variables = Blockly.Variables.allVariables();
+                }
+                var variables = Blockly.Variables.allVariables();
+                for (var i in variables) {
+                    if (Blockly.Variables.allVariables()[i] !== this.last_variables[i]) {
+                        try {
+                            var blockInput = this.getInput('VALUE');
+                            blockInput.removeField('VAR');
+                            blockInput.removeField('DUMMY_SET_AS');
+                            blockInput.appendField(new Blockly.FieldDropdown(this.getVariables()), 'VAR');
+                            blockInput.appendField(RoboBlocks.locales.getKey('LANG_VARIABLES_SET_AS'), 'DUMMY_SET_AS');
+                            this.setFieldValue(this.last_variable, 'VAR');
+                        } catch (e) {}
+                        this.last_variables = Blockly.Variables.allVariables();
+                    }
+                }
                 try {
                     if (!this.exists()) {
                         this.setWarningText(RoboBlocks.locales.getKey('LANG_VARIABLES_CALL_WITHOUT_DEFINITION'));
@@ -15213,8 +16629,8 @@
             },
             onchange: function() {
                 if (this.getFieldValue('CONN_TYPE') !== this.last_conn_type) {
-                    this.check_conn_type();
                     this.last_conn_type = this.getFieldValue('CONN_TYPE');
+                    this.check_conn_type();
                 }
             },
             mutationToDom: function() {
