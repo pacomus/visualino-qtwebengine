@@ -1,3 +1,13 @@
+visualino (0.7.3) wily; urgency=medium
+  * More variable types.
+  * Blocks for vectors.
+  * Support por I2C LCD and CreateChar.
+  * Blocks for NRF24L01.
+  * Blocks for ESP01 (wifi).
+  * Blocks for PCA9685.
+
+ -- Francisco J. Molina <fjmrobles@gmail.com>  Thu, 02 Feb 2023 19:15:10 +0000
+
 visualino (0.7) wily; urgency=medium
 
   * Blocks for typed variables.
