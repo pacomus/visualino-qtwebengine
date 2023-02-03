@@ -590,7 +590,7 @@ void MainWindow::loadBlockly() {
     ui->webView->page()->setScrollBarPolicy(
                 Qt::Horizontal,
                 Qt::ScrollBarAlwaysOff);
-
+    */
 
     // Signal is emitted before frame loads any web content
     webHelper = new JsWebHelpers();
@@ -601,7 +601,6 @@ void MainWindow::loadBlockly() {
 
     // Capture signal
     connect(webHelper, SIGNAL(changed()), this, SLOT(onSourceChanged()));
-    */
 
     // Reset history
     sourceChanging = false;
