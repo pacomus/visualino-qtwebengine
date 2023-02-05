@@ -1,3 +1,8 @@
+visualino (0.7.4) wily; urgency=medium
+  * Migration from QtWebView to QtWebEngine.
+
+ -- Francisco J. Molina <fjmrobles@gmail.com>  Thu, 05 Feb 2023 19:15:10 +0000
+
 visualino (0.7.3) wily; urgency=medium
   * More variable types.
   * Blocks for vectors.
@@ -6,7 +11,7 @@ visualino (0.7.3) wily; urgency=medium
   * Blocks for ESP01 (wifi).
   * Blocks for PCA9685.
 
- -- Francisco J. Molina <fjmrobles@gmail.com>  Thu, 02 Feb 2023 19:15:10 +0000
+ -- Francisco J. Molina <fjmrobles@gmail.com>  Thu, 10 Jan 2023 20:01:10 +0000
 
 visualino (0.7) wily; urgency=medium
 
