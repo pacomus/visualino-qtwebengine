@@ -21,8 +21,7 @@
     <script src="javascript/blockly-bq/blockly_compressed.js"></script>
     <script src="javascript/blockly-bq/blocks_compressed.js"></script>
     <script src="javascript/blockly-bq/arduino_compressed.js"></script>
-    <script src="qrc:///qtwebchannel/qwebchannel.js">
-</script>
+    <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
     <script src="roboblocks.js"></script>
     <script>
         var counter=0;
@@ -79,17 +78,20 @@
 
           // Update code
           Blockly.addChangeListener(function () {
-              $('#code').html('<code class="c++"><pre>' +
-                 escapeCode(Blockly.Arduino.workspaceToCode()) 
-                 + '</pre></code>');
+              $('#code').html('<code class="c++"><pre>'
+                  + escapeCode(Blockly.Arduino.workspaceToCode())
+                  + '</pre></code>');
               // Highlight
               $("pre").each(function (i, e) {
                   hljs.highlightBlock(e);
               });
               // webHelper is injected in Visualino
-              webHelper.sourceChanged();
+              new QWebChannel(qt.webChannelTransport, function(channel) {
+                  channel.objects.webHelper.sourceChanged(function(){});
+              });
           });
         }
+
 
         // Show/hide code
         function toogleCode() {
