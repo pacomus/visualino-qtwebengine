@@ -5,6 +5,7 @@ visualino (0.7.4) wily; urgency=medium
 
 visualino (0.7.3) wily; urgency=medium
   * More variable types.
+  * Blocks for interrupts.
   * Blocks for vectors.
   * Support por I2C LCD and CreateChar.
   * Blocks for NRF24L01.
