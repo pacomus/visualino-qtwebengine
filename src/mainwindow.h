@@ -10,6 +10,7 @@
 #include <QProcess>
 #include <QtSerialPort/QSerialPort>
 #include <QWebEngineView>
+#include <QWebChannel>
 
 namespace Ui {
 class MainWindow;
@@ -35,6 +36,7 @@ private:
     QList<GraphWidget *> graphList;
     QStringList documentHistory;
     JsWebHelpers *webHelper;
+    QWebChannel *webChannel;
     bool sourceChanging;
     bool sourceChanged;
     int documentHistoryStep;

@@ -592,6 +592,7 @@ void MainWindow::loadBlockly() {
                 Qt::ScrollBarAlwaysOff);
     */
 
+
     // Signal is emitted before frame loads any web content
     webHelper = new JsWebHelpers();
     connect(ui->webView->page(),
@@ -931,12 +932,11 @@ QString MainWindow::escapeCharacters(const QString& string) {
 
 void MainWindow::actionInjectWebHelper() {
     // Inject the webHelper object in the webview. This is used in index.html,
-    // where a call is made back to webHelper.sourceChanged() function.
-    /* TODO
-    ui->webView->page()->addToJavaScriptWindowObject(
-                QString("webHelper"),
-                webHelper);
-    */
+    // where a call is made back to webHelper.sourceChanged() function when
+    //code is changed.
+    webChannel = new QWebChannel(this);
+    webChannel->registerObject(QString("webHelper"),webHelper);
+    ui->webView->page()->setWebChannel(webChannel);
 }
 
 int MainWindow::checkSourceChanged() {
