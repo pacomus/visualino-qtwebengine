@@ -313,7 +313,12 @@ pressed: { border: 1px };</string>
         </item>
         <item>
          <property name="text">
-          <string>arduino:avr:mega</string>
+          <string>arduino:avr:nano:cpu=atmega328old</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>arduino:avr:mega:cpu=atmega2560</string>
          </property>
         </item>
         <item>
@@ -329,6 +334,16 @@ pressed: { border: 1px };</string>
         <item>
          <property name="text">
           <string>Intel:arc32:arduino_101</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>esp8266:esp8266:generic:CpuFrequency=80,FlashFreq=40,FlashMode=dio,UploadSpeed=115200,FlashSize=512K64,ResetMethod=ck,Debug=Disabled,DebugLevel=None____</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>esp8266:esp8266:nodemcuv2:CpuFrequency=80,UploadSpeed=115200,FlashSize=4M3M</string>
          </property>
         </item>
        </widget>
@@ -382,7 +397,7 @@ pressed: { border: 1px };</string>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>25</height>
+     <height>30</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
